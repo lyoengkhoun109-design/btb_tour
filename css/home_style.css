@@ -1,0 +1,58 @@
+.navbar ul{
+    justify-content: center;
+    list-style: none;
+    display: flex;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a:hover{
+    background-color: rgb(235, 235, 235);
+}
+
+.navbar a:active{
+    color: black;
+    font-weight: bolder ;
+}
+
+.navbar a{
+    font-weight: bolder ;
+    text-decoration: none;
+    color: rgb(123, 122, 122);
+    font-family: 'khmer os battambang';
+    padding: 5px 0;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.main-content{
+    position: relative;
+    
+}
+#banner img{
+    display: block;
+    width: 80%;
+    height: 340px;
+    margin: 0 auto;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+#s-info{
+    width: 50%;
+    background-color: rgba(246, 244, 241, 0.892);
+    display: flex;
+    margin: 0 auto;
+    padding: 50px;
+    position: absolute;
+    transform: translate(-50%);
+    bottom: -50px;
+    left: 50%;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.15) ;
+}
