@@ -48,10 +48,10 @@
     background-color: rgba(246, 244, 241, 0.892);
     display: flex;
     margin: 0 auto;
-    padding: 50px;
+    padding: 75px;
     position: absolute;
     transform: translate(-50%);
-    bottom: -50px;
+    bottom: -90px;
     left: 50%;
     border-radius: 20px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.15) ;
