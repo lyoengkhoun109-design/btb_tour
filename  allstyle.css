@@ -1,0 +1,247 @@
+/* Base Reset & Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kantumruy Pro', sans-serif;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #d1d5db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container / Modal Wrapper */
+.detail-card {
+    width: 100%;
+    max-width: 900px;
+    background: #111827;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #1f2937;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+/* Top Hero Banner */
+.hero-banner {
+    position: relative;
+    height: 240px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), #111827), url('https://images.unsplash.com/photo-1540611025311-01df3cef54b5?q=80&w=1200&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.location-tag {
+    font-size: 13px;
+    color: #34d399;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.rating-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #fbbf24;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.rating-tag span {
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+.hero-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+.hero-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.maps-btn {
+    background-color: #10b981;
+    color: #064e3b;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+}
+
+/* Content Sections */
+.content-body {
+    padding: 24px;
+}
+
+.section-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.section-title i {
+    color: #10b981;
+}
+
+.description-text {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #9ca3af;
+    margin-bottom: 28px;
+}
+
+.sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.sub-count {
+    color: #10b981;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.hint-text {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Sub Destination Grid (2x2) */
+.sub-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 640px) {
+    .sub-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sub-card {
+    background-color: #1a2332;
+    border-radius: 16px;
+    padding: 12px;
+    border: 1px solid #273549;
+}
+
+.img-container {
+    position: relative;
+    height: 140px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.expand-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    backdrop-filter: blur(4px);
+}
+
+.sub-card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.sub-card-desc {
+    font-size: 12px;
+    color: #9ca3af;
+    line-height: 1.5;
+}
+
+/* Bottom Tip Box */
+.tip-box {
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.tip-icon {
+    color: #10b981;
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.tip-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #34d399;
+    margin-bottom: 2px;
+}
+
+.tip-desc {
+    font-size: 12px;
+    color: #9ca3af;
+    line-height: 1.5;
+}
