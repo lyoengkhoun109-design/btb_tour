@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Cambodia</title>
+
+    <link rel="stylesheet" href="/css/afterhome.css">
+
+    <!-- Khmer font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Search Header -->
+        <header class="header">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="search...">
+            </div>
+        </header>
+
+        <!-- Categories -->
+        <nav class="categories">
+            <button class="category active" data-category="all">
+                <a href="/html/all.html"> ទាំងអស់</a>
+            </button>
+
+            <button class="category" data-category="shopping">
+                <a href="/html/modernmarket.html"> ផ្សារទំនើប</a>
+            </button>
+
+            <button class="category" data-category="tourism">
+                <a href="/html/tourism.html"> ទេសចរណ៍</a>
+            </button>
+
+            <button class="category" data-category="camping">
+                <a href="/html/camping.html"> កន្លែងបោះតង់</a>
+            </button>
+
+            <button class="category" data-category="food">
+                <a href="/html/localfood.html"> ម្ហូប</a>
+            </button>
+
+            <button class="category" data-category="hotel">
+                <a href="/html/pagoda.html"> វត្ត</a>
+            </button>
+
+            <button class="category" data-category="house">
+                <a href="/html/hotel.html"> សណ្ឋាគារ</a>
+            </button>
+
+        </nav>
+
+        <!-- Section Title -->
+        <section class="section-heading">
+            <h3>
+                <i class="fa-solid fa-location-dot"></i>
+                ទីតាំងពេញនិយមទាំងអស់
+            </h3>
+
+            <span id="resultCount">4 ទីតាំង</span>
+        </section>
+
+        <!-- Destination Cards -->
+        <main class="destination-grid" id="destinationGrid">
+
+            <!-- Card 1 -->
+            <article class="card" data-category="shopping">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=600"
+                        alt="Shopping destination">
+
+                    <span class="tag">
+                        🌿 ផ្សារទំនើប
+                    </span>
+
+                    <span class="rating">
+                        <i class="fa-solid fa-star"></i> 4.9
+                    </span>
+                </div>
+
+                <div class="card-content">
+                    <h3>វិថីស្រែ & ផ្សារទំនើប</h3>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        see more
+                    </p>
+
+                    <a href="https://www.google.com/maps" target="_blank" class="map-button">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Google Map
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card" data-category="camping">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=600" alt="Camping">
+
+                    <span class="tag">
+                        🏕️ បោះតង់
+                    </span>
+
+                    <span class="rating">
+                        <i class="fa-solid fa-star"></i> 4.8
+                    </span>
+                </div>
+
+                <div class="card-content">
+                    <h3>កន្លែង Camping</h3>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        see more
+                    </p>
+
+                    <a href="https://www.google.com/maps" target="_blank" class="map-button">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Google Map
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card" data-category="house">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600" alt="Modern house">
+
+                    <span class="tag">
+                        🏡 វីឡាកម្សាន្ត
+                    </span>
+
+                    <span class="rating">
+                        <i class="fa-solid fa-star"></i> 4.8
+                    </span>
+                </div>
+
+                <div class="card-content">
+                    <h3>ផ្ទះស្នាក់នៅប្រណិត</h3>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        see more
+                    </p>
+
+                    <a href="https://www.google.com/maps" target="_blank" class="map-button">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Google Map
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="card" data-category="restaurant">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600" alt="Japanese food">
+
+                    <span class="tag">
+                        🍜 ម្ហូប
+                    </span>
+
+                    <span class="rating">
+                        <i class="fa-solid fa-star"></i> 4.9
+                    </span>
+                </div>
+
+                <div class="card-content">
+                    <h3>ភោជនីយដ្ឋានម្ហូបឆ្ងាញ់</h3>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        see more
+                    </p>
+
+                    <a href="https://www.google.com/maps" target="_blank" class="map-button">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Google Map
+                    </a>
+                </div>
+            </article>
+
+        </main>
+
+        <div id="noResults" class="no-results">
+            រកមិនឃើញទីតាំងទេ!
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
