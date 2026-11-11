@@ -14,7 +14,7 @@ body{
 }
 
 .form-box{
-    
+    box-shadow: 0 0 15px 1.5px rgba(0, 0, 0, 0.1);
     background-color: #ffff;
     width: 400px;
     height: 450px;
@@ -35,7 +35,7 @@ body{
     display: flex;
     position: relative;
     
-    --bottom: 16px;/* ដាក់​​ ឬ​ ប្ដូរតែម្ដងដូរបានច្រើន child (propoty : var(--propoty))  "--propoty: value;" */
+    --bottom: 17px;/* ដាក់​​ ឬ​ ប្ដូរតែម្ដងដូរបានច្រើន child (propoty : var(--propoty))  "--propoty: value;" */
 }
 #em_user_Name input,
 #password input{
@@ -51,6 +51,7 @@ body{
     position: absolute;
     bottom: var(--bottom);
     right: 20px;
+    font-weight: 700;
 }
 #more{
     margin: 0 25px;
@@ -76,3 +77,4 @@ body{
     font-size: 12pt;
     background-color: blue;
 }
+

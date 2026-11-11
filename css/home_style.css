@@ -5,6 +5,8 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
+    min-height: 140vh;
+    position: relative;
 }
 
 .logo{
@@ -44,6 +46,11 @@ body{
     background-color: #f4f4f4;
     border-radius: 20px;
 }
+.nav-left-side #logout i{
+    font-weight: bold;
+    
+}
+
 
 .nav-left-side #logout{
     background-color: rgba(39, 39, 234, 0.899);
@@ -70,7 +77,6 @@ body{
 #s-info{
     width: 60%;
     background-color: rgba(246, 244, 241, 0.892);
-    display: flex;
     margin: 0 auto;
     padding: 50px;
     position: absolute;
@@ -104,23 +110,164 @@ body{
 #select-container{
     display: flex;
     justify-content: space-between;
-    /* gap: 80px; */
-    width: 40%;
+    width: 100%;
+    
+}
+#location,
+#Num_day,
+#guest{
+    border-right: 2px solid gray;
+    border-radius: 0;
+    margin-right: 30px;
 }
 
-select{
-    margin-right: 60px;
-    display: flex;
+select,
+select::picker(select) {
+    appearance: base-select;
+    
+}
+
+select {
+    width: 200px;
+    padding: 12px;
     font-size: 14pt;
     text-align: center;
-    width: 100px;
-    outline: none;
     border: none;
+    outline: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
-#card{
-    background-color: red;
-    width: 200px;
-    height: auto;
+select::picker-icon {
+    color: black;
+    transition: rotate 0.2s ease;
+}
+
+select:open::picker-icon {
+    rotate: 180deg;
+}
+
+select::picker(select) {
+    position-area: block-end;
+    background: #fffffff9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #0002;
+    position-try-fallbacks: none;
+    position-try-order: none;
+    
+}
+
+option {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+::picker(select){
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+}
+
+option:hover{
+    background-color: #ebe8e8;
+}
+
+option::checkmark{
+    order: 1;
+    margin-inline-start: auto;
+    content: "";
+}
+
+/* place card */
+
+.place_container{
+    width: 78%;
+    justify-content: space-around;
+    display: flex;
+    gap: 15px ;    
+    margin: 150px auto;
+}
+
+
+.sec_card,
+.th_card{
+    height: 350px;
+    border-radius: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec_card{
+    width: 25%;
+}
+
+.th_card{
+    width: 70%;
+    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+#mini_card{
+    background-color: rgb(94, 93, 93);
+    min-height: 170px;
+    border-radius: 35px;
+    margin-bottom: 10px;
+}
+#mini_card2{
+    width: 32%;
+    height: 350px;
+    background-color: rgb(110, 109, 109);
+    border-radius: 50px;
+    position: relative;
+}
+
+#more_info,
+#locat_place{
+    background-color: #e41717;
+    position: absolute;
+    width: 40%;
+    border-radius: 20px;
+}
+
+#more_info{
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    width: auto;
+    height: 100px;
+    border-radius: 40px;
+}
+
+#locat_place{
+    top: 5px;
+    left: 0;
+    padding: 5px;
+    width: auto;
+    display: flex;
+}
+
+#locat_place a,
+#locat_place i{
+    text-decoration: none;
+    color: black;
+}
+
+#locat_place a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#locat_place:hover{
+    box-shadow: 0 0 15px 1.5px rgba(0, 0, 0, 0.1);
+}
+
+#locat_place:hover{
+    transform: scale(1.05);
 }
