@@ -15,17 +15,19 @@ body{
 
 .form-box{
     /* box-shadow: 0 0 15px 1.5px rgba(0, 0, 0, 0.61); */
-    background-color: #a9a9a985;
+    background-color: #a9a9a945;
     width: 350px;
     height: 450px;
     justify-content: center;
     text-align: center;
     margin: 0 auto;
     border-radius: 35px;
-    padding: 50px 20px;
+    padding: 50px 0;
     position: absolute;
     right: 0;
     border: 2px solid #f4f4f42f;
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(2px);  /*for blur background */
 }
 
 #em_user_Name,
@@ -52,12 +54,15 @@ input::placeholder{
     width: 100%;
     border: none;
     outline: none;
-    padding: 17px;
+    padding: 16px;
     border-radius: 20px;
+    top: -2px;
+    font-size: 12pt;
 }
 
 #fpass a{
-    color: rgb(43, 0, 255);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 #em_user_Name i,
 #password i{
@@ -65,6 +70,9 @@ input::placeholder{
     bottom: var(--bottom);
     right: 20px;
     font-weight: 700;
+    color: rgb(78, 75, 75);
+    font-size: 15pt;
+    bottom: 14px;
 }
 #more{
     margin: 0 25px;
@@ -84,7 +92,7 @@ input::placeholder{
 #btnLogin{
     border: none;
     padding: 15px;
-    width: 150px;
+    width: 200px;
     margin: 20px;
     border-radius: 15px;
     font-size: 12pt;
@@ -92,7 +100,7 @@ input::placeholder{
     color: #ffff;
 }
 #btnLogin:hover{
-    background-color: rgb(14, 14, 237);
+    background-color: rgba(14, 14, 237, 0.618);
 }
 #left_image{
     width: 100%;

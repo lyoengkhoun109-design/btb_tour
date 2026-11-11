@@ -1,0 +1,295 @@
+
+:root {
+    --green: #086653;
+    --mint: #edf9f5;
+    --text: #202a2d;
+    --muted: #929b9b;
+    --page: #f7faf9;
+    --shadow: 0 2px 8px rgba(20, 45, 40, .12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--page);
+    color: var(--text);
+    font-family: Arial, "Noto Sans Khmer", sans-serif;
+}
+
+/* Search bar */
+.topbar {
+    height: 64px;
+    background: var(--green);
+    padding: 9px 3.5%;
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    width: 100%;
+    height: 46px;
+    border: none;
+    outline: none;
+    border-radius: 28px;
+    background: white;
+    padding: 0 20px;
+    font-size: 16px;
+}
+
+/* Navigation */
+.page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 18px 36px;
+}
+
+.nav {
+    height: 58px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: white;
+    padding: 0 20px;
+    margin: 0 -18px;
+    border-bottom: 1px solid #e8eeee;
+}
+
+.back,
+.search-icon {
+    border: none;
+    background: transparent;
+    color: var(--green);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.nav h1 {
+    font-size: 23px;
+    margin: 0;
+    flex: 1;
+}
+
+/* Banner */
+.hero {
+    height: 245px;
+    overflow: hidden;
+    background: #d8e7df;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Page title */
+.intro {
+    padding: 16px 4px 12px;
+}
+
+.intro h2 {
+    margin: 0 0 7px;
+    font-size: 28px;
+}
+
+.intro p {
+    margin: 0;
+    color: #7d8787;
+    font-size: 15px;
+}
+
+/* Filter buttons */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 12px 0 18px;
+}
+
+.filter {
+    border: none;
+    border-radius: 24px;
+    padding: 10px 22px;
+    background: #f0f2f2;
+    color: #465052;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.filter.active {
+    background: var(--green);
+    color: white;
+}
+
+.sort-wrap {
+    margin-left: auto;
+}
+
+select {
+    border: none;
+    border-radius: 24px;
+    padding: 10px 16px;
+    background: #f0f2f2;
+    color: #344044;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Cards grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.card {
+    min-width: 0;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid #e8eeee;
+}
+
+/* Card image */
+.photo {
+    position: relative;
+    height: 205px;
+    background: #dbe8e2;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Rating */
+.rating {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ffa900;
+    color: white;
+    border-radius: 18px;
+    padding: 5px 12px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* Card details */
+.details {
+    padding: 10px 13px 12px;
+}
+
+.details h3 {
+    margin: 0 0 5px;
+    font-size: 17px;
+}
+
+.location {
+    color: #a0a8a8;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Google Map button */
+.map-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: var(--mint);
+    color: #07816b;
+    border-radius: 12px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Hover effects */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(20, 45, 40, .16);
+}
+
+.map-link:hover {
+    background: #d8f3e9;
+}
+
+/* Responsive mobile */
+@media (max-width: 650px) {
+
+    .topbar {
+        height: 60px;
+    }
+
+    .page {
+        padding: 0 12px 24px;
+    }
+
+    .nav {
+        margin: 0 -12px;
+        padding: 0 14px;
+    }
+
+    .hero {
+        height: 190px;
+    }
+
+    .intro h2 {
+        font-size: 23px;
+    }
+
+    .filter {
+        padding: 9px 15px;
+        font-size: 14px;
+    }
+
+    .grid {
+        gap: 10px;
+    }
+
+    .photo {
+        height: 135px;
+    }
+
+    .details {
+        padding: 9px;
+    }
+
+    .details h3 {
+        font-size: 14px;
+    }
+
+    .location,
+    .map-link {
+        font-size: 12px;
+    }
+
+    .rating {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 390px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        height: 190px;
+    }
+}
