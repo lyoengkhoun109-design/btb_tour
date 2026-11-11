@@ -21,7 +21,7 @@ body{
     justify-content: center;
     text-align: center;
     margin: 0 auto;
-    border-radius: 15px;
+    border-radius: 35px;
     padding: 50px 20px;
 }
 
@@ -41,10 +41,11 @@ body{
 #password input{
     position: absolute;
     background-color: transparent;
+    width: 100%;
     border: none;
     outline: none;
-    bottom: var(--bottom);
-    left: 20px;
+    padding: 17px;
+    border-radius: 20px;
 }
 #em_user_Name i,
 #password i{
@@ -73,8 +74,27 @@ body{
     padding: 15px;
     width: 150px;
     margin: 20px;
-    border-radius: 20px;
+    border-radius: 15px;
     font-size: 12pt;
-    background-color: blue;
+    background-color: rgba(18, 80, 214, 0.845);
+    color: #ffff;
+}
+#btnLogin:hover{
+    background-color: rgb(14, 14, 237);
+}
+#left_image{
+    width: 400px;
+    height: 450px;
+}
+#left_image img{
+    object-fit: cover;
+    object-position: center;
+    width: auto;
+    height: 450px;
+    border-radius: 35px;
 }
 
+
+.login_card{
+    display: flex;
+}
