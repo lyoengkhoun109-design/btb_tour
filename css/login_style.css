@@ -59,18 +59,13 @@ input::placeholder{
     top: -2px;
     font-size: 12pt;
 }
-
-#fpass a{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
 #em_user_Name i,
 #password i{
     position: absolute;
     bottom: var(--bottom);
     right: 20px;
     font-weight: 700;
-    color: rgb(78, 75, 75);
+    color: rgb(74, 72, 72);
     font-size: 15pt;
     bottom: 14px;
 }
@@ -82,11 +77,19 @@ input::placeholder{
 #more input{
     display: inline-flex;
     margin-right: 10px;
+    
 }
 
 #more label,
-#more a{
-    font-size: 10pt;
+#more a,
+#more_option a{
+    font-size: 11pt;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#more_option{
+    line-height: 25px;
 }
 
 #btnLogin{
@@ -98,6 +101,7 @@ input::placeholder{
     font-size: 12pt;
     background-color: rgba(18, 80, 214, 0.845);
     color: #ffff;
+    cursor: pointer;
 }
 #btnLogin:hover{
     background-color: rgba(14, 14, 237, 0.618);
