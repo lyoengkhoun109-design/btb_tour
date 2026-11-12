@@ -160,12 +160,43 @@ option::checkmark{
     display: flex;
     justify-content: space-between;
 }
-#mini_card{
-    background-color: rgb(94, 93, 93);
-    min-height: 170px;
-    border-radius: 35px;
+#mini_card_switch,
+#mini_card_more{
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px 1.5px rgba(0, 0, 0, 0.1) ;
+}
+#mini_card_more{
+    height: 110px;
+}
+
+#mini_card_switch{
+    height: 230px;
+
+}
+#mini_card_switch p{
+    padding: 10px;
+    border-bottom: 1px solid rgb(203, 203, 203);
+}
+
+
+#all_region{
+    overflow: auto;
+    height: 180px;
+}
+#all_region ul li{
+    border-top: 1px solid rgb(203, 203, 203);
+    padding: 10px;
+    cursor: pointer;
     margin-bottom: 10px;
 }
+#all_region ul li:hover{
+    background-color: #d4d4d451;
+    border-radius: 14px;
+}
+
 #mini_card2{
     width: 32%;
     height: 350px;

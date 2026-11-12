@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const home = document.getElementById("home");
         const place = document.getElementById("place");
         const login = document.getElementById("logout");
-        const emergency = document.getElementById("emergency");
+        const emer = document.getElementById("emergency");
 
         // Navigation
         place.addEventListener("click", function(){
@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
         home.addEventListener("click", function(){
             window.location.href = "/html/home.html";
         });
+        emer.addEventListener("click", function(){
+            window.location.href = "/html/emergency.html";
+        });
+
 
         // Automatically change navbar color
         const currentPage = window.location.pathname;
@@ -31,6 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
         else if (currentPage === "/html/afterhome.html") {
             place.style.color = "black";
             place.style.fontWeight = "700";
+        }else if (currentPage === "/html/emergency.html") {
+            emer.style.color = "black";
+            emer.style.fontWeight = "700";
         }
         
 

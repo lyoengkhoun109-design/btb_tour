@@ -23,7 +23,7 @@
 }
 
 .navbar ul li,
-.nav-left-side ul li {
+.nav_left_side ul li {
     list-style: none;
     color: gray;
     padding: 10px;
@@ -33,7 +33,7 @@
 }
 
 .navbar ul,
-.nav-left-side ul{
+.nav_left_side ul{
     display: flex;
     gap: 5px;
     align-items: center;
@@ -43,7 +43,7 @@
     border-radius: 20px;
 }
 /* .navbar a, 
-.nav-left-side a{
+.nav_left_side a{
     text-decoration: none;
     color: gray;
     display: block; ដើម្បីអោយ​ link fill div have to use display: block;
@@ -55,17 +55,22 @@
     background-color: #f4f4f4;
     border-radius: 20px;
 }
-.nav-left-side #logout i{
+.nav_left_side #logout i{
     font-weight: bold;
-    
+    rotate: 180deg;
 }
 
 
-.nav-left-side #logout{
+.nav_left_side #logout{
     background-color: rgba(39, 39, 234, 0.899);
     color: #f4f4f4;
     margin-right: 20px;
 }
-.nav-left-side #logout:hover{
+.nav_left_side #logout:hover{
     background-color: rgb(13, 13, 216);
+}
+
+.nav_left_side #emergency:hover{
+    background-color: #f4f4f4;
+    border-radius: 20px;
 }

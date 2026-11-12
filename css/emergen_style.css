@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(/images/emer_background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.container{
+    margin: 0 auto;
+    background-color: rgb(231, 231, 231);
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    padding: 20px 45px;
+    box-shadow: 0 0 10px 1.5px rgba(0, 0, 0, 0.15);
+    border-radius:10px;
+}
+
+#card{
+    margin-bottom: 20px ;
+    flex-wrap: wrap;
+    position: relative;
+    width: auto;
+    height: 200px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 17px 60px;
+
+}
+#card h1{
+    text-align: center;
+}
+#card h3{
+    position: absolute;
+    top: 70px;
+}
+
+#btnCall{
+    color: #ffff;
+    position: absolute;
+    width: 40%;
+    bottom: 20px;
+    right: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(55, 108, 253);
+    font-size: 14pt;
+}
+
+#btnCall:hover{
+    background-color: rgba(23, 23, 254, 0.896);
+    transform: scale(1.03);
+}
