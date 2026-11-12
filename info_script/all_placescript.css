@@ -1,0 +1,455 @@
+
+/* =========================================
+   1. GENERAL (ការកំណត់ទូទៅ)
+========================================= */
+
+* {
+    margin: 0;              /* លុបគម្លាតខាងក្រៅ */
+    padding: 0;             /* លុបគម្លាតខាងក្នុង */
+    box-sizing: border-box; /* រាប់ Padding និង Border ក្នុងទំហំ Element */
+}
+
+body {
+    font-family: 'Kantumruy Pro', sans-serif; /* កំណត់ពុម្ពអក្សរខ្មែរ */
+    background: #f4f7f6;    /* ពណ៌ផ្ទៃខាងក្រោយ */
+    color: #20272b;         /* ពណ៌អក្សរ */
+}
+
+
+/* =========================================
+   2. MAIN DETAIL CARD (ប្រអប់ព័ត៌មានលម្អិត)
+========================================= */
+
+.detail-card {
+    max-width: 1100px;      /* ទទឹងអតិបរមា 1100px */
+    margin: 30px auto;      /* គម្លាតលើក្រោម 30px និងដាក់កណ្ដាល */
+    background: white;      /* ផ្ទៃខាងក្រោយពណ៌ស */
+    border-radius: 20px;    /* ធ្វើឱ្យជ្រុងមូល */
+    overflow: hidden;       /* លាក់មាតិកាដែលហៀរចេញ */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08); /* ដាក់ស្រមោល */
+}
+
+
+/* =========================================
+   3. HERO BANNER (ផ្នែករូបភាពខាងលើ)
+========================================= */
+
+.hero-banner {
+    min-height: 280px;      /* កម្ពស់អប្បបរមា 280px */
+
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), /* ស្រទាប់ខ្មៅថ្លាលើរូបភាព */
+        url('https://images.unsplash.com/photo-1509114397022-ed747cca3f65?q=80&w=1200')
+        center/cover;       /* ដាក់រូបភាពកណ្ដាល និងពេញផ្ទៃ */
+
+    padding: 25px;          /* គម្លាតខាងក្នុង 25px */
+    display: flex;          /* ប្រើ Flexbox */
+    align-items: flex-end;  /* ដាក់មាតិកាខាងក្រោម */
+    position: relative;     /* ធ្វើជាទីតាំងយោងសម្រាប់ Element កូន */
+}
+
+.close-btn {
+    position: absolute;     /* កំណត់ទីតាំងដោយឯករាជ្យ */
+    top: 15px;              /* ឃ្លាតពីខាងលើ 15px */
+    right: 20px;            /* ឃ្លាតពីខាងស្ដាំ 20px */
+    background: rgba(0,0,0,0.5); /* ផ្ទៃខ្មៅថ្លា */
+    color: white;           /* ពណ៌អក្សរស */
+    border: none;           /* លុបស៊ុម */
+    width: 40px;            /* ទទឹង 40px */
+    height: 40px;           /* កម្ពស់ 40px */
+    border-radius: 50%;     /* ធ្វើជារង្វង់ */
+    font-size: 25px;        /* ទំហំអក្សរ 25px */
+    cursor: pointer;        /* ប្ដូរ Mouse ទៅជារូបដៃ */
+}
+
+.hero-title-row {
+    width: 100%;            /* ទទឹងពេញ 100% */
+    display: flex;          /* ប្រើ Flexbox */
+    justify-content: space-between; /* បំបែកមាតិកាទៅសងខាង */
+    align-items: flex-end;  /* តម្រឹមទៅខាងក្រោម */
+    gap: 15px;              /* ចន្លោះរវាង Element 15px */
+    color: white;           /* ពណ៌អក្សរស */
+    flex-wrap: wrap;        /* អនុញ្ញាតឱ្យចុះបន្ទាត់ */
+}
+
+.location-tag,
+.rating-tag {
+    display: inline-block;  /* បង្ហាញនៅជាប់គ្នា */
+    padding: 7px 12px;      /* គម្លាតខាងក្នុង */
+    border-radius: 20px;    /* ធ្វើឱ្យជ្រុងមូល */
+    font-size: 13px;        /* ទំហំអក្សរ 13px */
+    margin: 4px;            /* គម្លាតខាងក្រៅ 4px */
+    background: rgba(255,255,255,0.2); /* ផ្ទៃសថ្លា */
+}
+
+.rating-tag {
+    color: #ffbd35;         /* ពណ៌អក្សរលឿង */
+}
+
+.hero-title {
+    font-size: 30px;        /* ទំហំចំណងជើង 30px */
+    margin-top: 12px;       /* គម្លាតខាងលើ 12px */
+}
+
+.maps-btn {
+    background: #087c68;    /* ផ្ទៃប៊ូតុងពណ៌បៃតង */
+    color: white;           /* ពណ៌អក្សរស */
+    padding: 11px 17px;     /* គម្លាតខាងក្នុង */
+    border-radius: 10px;    /* ជ្រុងមូល 10px */
+    text-decoration: none;  /* លុបបន្ទាត់ក្រោម Link */
+    font-weight: 700;       /* អក្សរដិត */
+    white-space: nowrap;    /* មិនឱ្យអក្សរចុះបន្ទាត់ */
+}
+
+
+/* =========================================
+   4. CONTENT (ផ្នែកមាតិកា)
+========================================= */
+
+.content-body {
+    padding: 25px;         /* គម្លាតខាងក្នុង 25px */
+}
+
+.section-title {
+    font-size: 19px;       /* ទំហំចំណងជើង 19px */
+    font-weight: 700;      /* អក្សរដិត */
+    margin-bottom: 15px;   /* គម្លាតខាងក្រោម 15px */
+}
+
+.section-title i {
+    color: #0a927b;        /* ពណ៌ Icon បៃតង */
+    margin-right: 7px;     /* គម្លាតខាងស្ដាំ Icon */
+}
+
+.description-text {
+    line-height: 2;        /* ចន្លោះរវាងបន្ទាត់អក្សរ */
+    color: #626b6c;        /* ពណ៌អក្សរប្រផេះ */
+    font-size: 15px;       /* ទំហំអក្សរ 15px */
+    margin-bottom: 30px;   /* គម្លាតខាងក្រោម 30px */
+}
+
+
+/* =========================================
+   5. SUB HEADER (ចំណងជើងផ្នែករង)
+========================================= */
+
+.sub-header {
+    display: flex;             /* ប្រើ Flexbox */
+    justify-content: space-between; /* ដាក់មាតិកាឆ្វេង និងស្ដាំ */
+    align-items: center;       /* តម្រឹមកណ្ដាល */
+    flex-wrap: wrap;           /* អនុញ្ញាតឱ្យចុះបន្ទាត់ */
+    gap: 10px;                 /* ចន្លោះរវាង Element */
+    margin-bottom: 20px;       /* គម្លាតខាងក្រោម */
+}
+
+.sub-count {
+    color: #0a927b;            /* ពណ៌បៃតង */
+    font-size: 13px;           /* ទំហំអក្សរ 13px */
+}
+
+.hint-text {
+    color: #999;               /* ពណ៌ប្រផេះ */
+    font-size: 12px;           /* ទំហំអក្សរ 12px */
+}
+
+
+/* =========================================
+   6. GRID (រៀបចំ Card)
+========================================= */
+
+.sub-grid {
+    display: grid; /* ប្រើ CSS Grid */
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* បង្កើត 3 Columns ក្នុងមួយជួរ */
+    /* 1fr មានន័យថាចែកទទឹងឱ្យស្មើគ្នា */
+    /* minmax(0, 1fr) អនុញ្ញាតឱ្យ Column រួញតូចបាន */
+
+    gap: 20px; /* ចន្លោះរវាង Card 20px */
+}
+
+
+/* =========================================
+   7. SUB CARD (ប្រអប់ Card នីមួយៗ)
+========================================= */
+
+.sub-card {
+    background: white;              /* ផ្ទៃខាងក្រោយពណ៌ស */
+    border: 1px solid #e5ebea;     /* ស៊ុមប្រផេះស្រាល */
+    border-radius: 15px;           /* ជ្រុងមូល 15px */
+    overflow: hidden;               /* លាក់មាតិកាដែលហៀរចេញ */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06); /* ស្រមោល */
+    transition: 0.3s;              /* ចលនារលូន 0.3 វិនាទី */
+}
+
+.sub-card:hover {
+    transform: translateY(-4px);    /* លើក Card ឡើង 4px */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12); /* បង្កើនស្រមោល */
+}
+
+
+/* =========================================
+   8. IMAGE (រូបភាពក្នុង Card)
+========================================= */
+
+.img-container {
+    height: 190px;       /* កម្ពស់រូបភាព 190px */
+    width: 100%;         /* ទទឹងពេញ Card */
+    position: relative;  /* ទីតាំងយោងសម្រាប់ប៊ូតុង Zoom */
+    overflow: hidden;    /* លាក់ផ្នែករូបភាពដែលហៀរចេញ */
+}
+
+.img-container img {
+    width: 100%;          /* រូបភាពពេញទទឹង */
+    height: 100%;         /* រូបភាពពេញកម្ពស់ */
+    object-fit: cover;    /* កាត់រូបឱ្យសមប្រអប់ */
+    transition: transform 0.3s; /* ចលនាពេលពង្រីក */
+}
+
+.img-container:hover img {
+    transform: scale(1.06); /* ពង្រីករូបភាព 1.06 ដង */
+}
+
+
+/* =========================================
+   9. EXPAND BUTTON (ប៊ូតុងពង្រីករូបភាព)
+========================================= */
+
+.expand-btn {
+    position: absolute;      /* កំណត់ទីតាំងដោយឯករាជ្យ */
+    right: 15px;             /* ឃ្លាតពីស្ដាំ 15px */
+    bottom: 15px;            /* ឃ្លាតពីក្រោម 15px */
+
+    width: 20px;             /* ទទឹង 20px */
+    height: 20px;            /* កម្ពស់ 20px */
+
+    display: flex;           /* ប្រើ Flexbox */
+    justify-content: center; /* ដាក់ Icon កណ្ដាលផ្ដេក */
+    align-items: center;     /* ដាក់ Icon កណ្ដាលបញ្ឈរ */
+
+    background: rgba(0, 0, 0, 0.8); /* ផ្ទៃខ្មៅថ្លា */
+    color: white;            /* ពណ៌ Icon ស */
+    border: none;            /* លុបស៊ុម */
+    border-radius: 18px;     /* ធ្វើឱ្យជ្រុងមូល */
+    font-size: 24px;         /* ទំហំ Icon 24px */
+    cursor: pointer;         /* Mouse ទៅជារូបដៃ */
+    transition: 0.3s;        /* ចលនារលូន */
+    z-index: 2;              /* ដាក់ប៊ូតុងនៅខាងលើរូបភាព */
+}
+
+.expand-btn:hover {
+    background: #087c68;     /* ប្ដូរផ្ទៃទៅពណ៌បៃតង */
+    transform: scale(1.1);   /* ពង្រីកប៊ូតុង 1.1 ដង */
+}
+
+.expand-btn i {
+    pointer-events: none;    /* មិនឱ្យ Icon រារាំងការចុច */
+}
+
+
+/* =========================================
+   10. CARD TEXT (អក្សរក្នុង Card)
+========================================= */
+
+.sub-card-title {
+    padding: 12px 13px 5px; /* គម្លាតខាងក្នុង */
+    font-size: 16px;         /* ទំហំចំណងជើង 16px */
+    font-weight: 700;        /* អក្សរដិត */
+}
+
+.sub-card-desc {
+    padding: 0 13px 15px;    /* គម្លាតខាងក្នុង */
+    font-size: 13px;         /* ទំហំអក្សរ 13px */
+    color: #778080;          /* ពណ៌ប្រផេះ */
+    line-height: 1.9;        /* ចន្លោះបន្ទាត់អក្សរ */
+}
+
+
+/* =========================================
+   11. TIP BOX (ប្រអប់ណែនាំ)
+========================================= */
+
+.tip-box {
+    margin-top: 30px;            /* គម្លាតខាងលើ 30px */
+    padding: 18px;               /* គម្លាតខាងក្នុង 18px */
+    background: #edfaf6;         /* ផ្ទៃបៃតងស្រាល */
+    border-radius: 12px;         /* ជ្រុងមូល */
+    display: flex;               /* ប្រើ Flexbox */
+    gap: 13px;                   /* ចន្លោះ Icon និងអត្ថបទ */
+    align-items: flex-start;     /* តម្រឹមទៅខាងលើ */
+}
+
+.tip-icon {
+    color: #e9a323;               /* ពណ៌ Icon លឿង */
+    font-size: 22px;              /* ទំហំ Icon 22px */
+}
+
+.tip-title {
+    font-weight: 700;             /* អក្សរដិត */
+    margin-bottom: 5px;            /* គម្លាតខាងក្រោម */
+    color: #087c68;               /* ពណ៌បៃតង */
+}
+
+.tip-desc {
+    color: #687777;               /* ពណ៌ប្រផេះ */
+    font-size: 14px;              /* ទំហំអក្សរ 14px */
+    line-height: 1.8;              /* ចន្លោះបន្ទាត់ */
+}
+
+
+/* =========================================
+   12. IMAGE ZOOM VIEWER (ផ្ទាំងមើលរូបភាពធំ)
+========================================= */
+
+.zoom-viewer {
+    display: none;                 /* លាក់ផ្ទាំង Zoom ដំបូង */
+    position: fixed;               /* ឱ្យផ្ទាំងនៅថេរលើអេក្រង់ */
+    inset: 0;                      /* ពង្រីកពេញអេក្រង់ */
+    background: rgba(0,0,0,0.94); /* ផ្ទៃខ្មៅស្រអាប់ */
+    z-index: 9999;                 /* ដាក់នៅខាងលើគេ */
+    justify-content: center;       /* ដាក់រូបភាពកណ្ដាលផ្ដេក */
+    align-items: center;           /* ដាក់រូបភាពកណ្ដាលបញ្ឈរ */
+    padding: 25px;                 /* គម្លាតខាងក្នុង */
+}
+
+.zoom-viewer.active {
+    display: flex;                 /* បង្ហាញផ្ទាំងពេលមាន Class active */
+}
+
+.zoom-viewer img {
+    max-width: 90%;                /* ទទឹងមិនលើស 90% */
+    max-height: 85vh;              /* កម្ពស់មិនលើស 85% នៃអេក្រង់ */
+    object-fit: contain;           /* បង្ហាញរូបភាពទាំងមូល */
+    border-radius: 12px;           /* ជ្រុងមូល */
+    animation: zoomIn 0.3s ease;   /* ដាក់ Animation */
+}
+
+.zoom-close {
+    position: absolute;            /* កំណត់ទីតាំងដោយឯករាជ្យ */
+    top: 20px;                     /* ឃ្លាតពីលើ 20px */
+    right: 25px;                   /* ឃ្លាតពីស្ដាំ 25px */
+    background: rgba(255,255,255,0.15); /* ផ្ទៃសថ្លា */
+    color: white;                  /* ពណ៌អក្សរស */
+    border: none;                  /* លុបស៊ុម */
+    font-size: 32px;               /* ទំហំអក្សរ */
+    cursor: pointer;               /* Mouse ទៅជារូបដៃ */
+    width: 45px;                   /* ទទឹង 45px */
+    height: 45px;                  /* កម្ពស់ 45px */
+    border-radius: 50%;            /* ធ្វើជារង្វង់ */
+}
+
+
+/* =========================================
+   13. ZOOM ANIMATION (ចលនាពេលពង្រីក)
+========================================= */
+
+@keyframes zoomIn {
+    from {                    /* ស្ថានភាពចាប់ផ្ដើម */
+        transform: scale(0.7); /* រូបភាពតូច */
+        opacity: 0;             /* មិនទាន់មើលឃើញ */
+    }
+
+    to {                      /* ស្ថានភាពបញ្ចប់ */
+        transform: scale(1);   /* ទំហំធម្មតា */
+        opacity: 1;             /* មើលឃើញច្បាស់ */
+    }
+}
+
+
+/* =========================================
+   14. TABLET (ការកែសម្រាប់ Tablet)
+========================================= */
+
+@media (max-width: 768px) {
+    /* ដំណើរការនៅពេលអេក្រង់ <= 768px */
+
+    .detail-card {
+        margin: 10px;          /* បន្ថយគម្លាតខាងក្រៅ */
+    }
+
+    .sub-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* បង្ហាញ 2 Cards ក្នុងមួយជួរ */
+
+        gap: 12px;             /* ចន្លោះ Card 12px */
+    }
+
+    .hero-title {
+        font-size: 24px;       /* បន្ថយទំហំចំណងជើង */
+    }
+}
+
+
+/* =========================================
+   15. MOBILE (ការកែសម្រាប់ទូរស័ព្ទ)
+========================================= */
+
+@media (max-width: 480px) {
+    /* ដំណើរការនៅពេលអេក្រង់ <= 480px */
+
+    .sub-grid {
+        grid-template-columns: 1fr;
+        /* បង្ហាញ Card មួយក្នុងមួយជួរ */
+    }
+
+    .content-body {
+        padding: 15px;         /* បន្ថយគម្លាតខាងក្នុង */
+    }
+
+    .img-container {
+        height: 200px;         /* កម្ពស់រូបភាព 200px */
+    }
+
+    .hero-banner {
+        min-height: 240px;     /* កម្ពស់អប្បបរមា 240px */
+        padding: 18px;         /* គម្លាតខាងក្នុង 18px */
+    }
+
+    .hero-title {
+        font-size: 21px;       /* ទំហំចំណងជើង 21px */
+    }
+
+    .maps-btn {
+        font-size: 12px;       /* ទំហំអក្សរប៊ូតុង */
+    }
+
+    .zoom-viewer img {
+        max-width: 100%;       /* ទទឹងរូបភាពពេញ */
+        max-height: 80vh;      /* កម្ពស់មិនលើស 80% នៃអេក្រង់ */
+    }
+
+    .expand-btn {
+        width: 55px;           /* ទទឹងប៊ូតុង 55px */
+        height: 55px;          /* កម្ពស់ប៊ូតុង 55px */
+        font-size: 21px;       /* ទំហំ Icon 21px */
+    }
+}
+
+
+/* =========================================
+   ចំណាំសំខាន់
+========================================= */
+
+/*
+1. margin = គម្លាតខាងក្រៅ
+2. padding = គម្លាតខាងក្នុង
+3. width = ទទឹង
+4. height = កម្ពស់
+5. background = ផ្ទៃខាងក្រោយ
+6. color = ពណ៌អក្សរ
+7. border = ស៊ុម
+8. border-radius = ជ្រុងមូល
+9. display: flex = រៀបចំ Element ដោយ Flexbox
+10. display: grid = រៀបចំ Element ជា Grid
+11. position: relative = ទីតាំងយោង
+12. position: absolute = ទីតាំងឯករាជ្យ
+13. position: fixed = ទីតាំងថេរលើអេក្រង់
+14. transition = ចលនារលូន
+15. transform = ផ្លាស់ប្ដូរទំហំ ឬទីតាំង
+16. @media = កែតាមទំហំអេក្រង់
+17. z-index = លំដាប់ Element លើគ្នា
+18. overflow: hidden = លាក់មាតិកាដែលហៀរចេញ
+
+ចំណាំ៖ CSS គ្រប់គ្រងរូបរាង។
+JavaScript គ្រប់គ្រងមុខងារចុច Zoom និងបិទរូបភាព។
+*/
