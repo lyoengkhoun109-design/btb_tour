@@ -5,7 +5,7 @@ const password = document.getElementById("input_pass");
 loginBtn.addEventListener("click", function(){
     if(username.value !=="" && password.value !==""){
         console.log("Moving to home page...");
-        window.location.href="./home.html";
+        window.location.href="/html/home.html";
     }else{
         alert("Please enter username and password");
     };
