@@ -1,5 +1,7 @@
 
-/* GENERAL */
+/* =====================================
+   1. GENERAL
+===================================== */
 
 * {
     margin: 0;
@@ -11,267 +13,413 @@ body {
     font-family: 'Kantumruy Pro', sans-serif;
     background: #f4f7f6;
     color: #20272b;
+    padding: 30px 20px;
 }
 
-/* MAIN DETAIL CARD */
+
+/* =====================================
+   2. MAIN DETAIL CARD
+===================================== */
 
 .detail-card {
-    max-width: 1100px;
-    margin: 30px auto;
-    background: white;
-    border-radius: 20px;
+    max-width: 1200px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
 }
 
-/* HERO BANNER */
+
+/* =====================================
+   3. HERO BANNER
+===================================== */
 
 .hero-banner {
+    position: relative;
     min-height: 280px;
-    background:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        url('https://images.unsplash.com/photo-1509114397022-ed747cca3f65?q=80&w=1200')
-        center/cover;
-
-    padding: 25px;
+    padding: 45px 40px;
     display: flex;
     align-items: flex-end;
-    position: relative;
+
+    background: linear-gradient(
+        135deg,
+        #245c43,
+        #438b64
+    );
+    color: #ffffff;
 }
 
 .close-btn {
     position: absolute;
-    top: 15px;
-    right: 20px;
-    background: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
+    top: 18px;
+    right: 22px;
+
     width: 40px;
     height: 40px;
+
+    border: none;
     border-radius: 50%;
-    font-size: 25px;
+
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+
+    font-size: 28px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    background: #ffffff;
+    color: #245c43;
 }
 
 .hero-title-row {
     width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    gap: 15px;
-    color: white;
-    flex-wrap: wrap;
+
+    gap: 20px;
 }
 
 .location-tag,
 .rating-tag {
-    display: inline-block;
-    padding: 7px 12px;
-    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 13px;
+    margin-bottom: 15px;
+    margin-right: 7px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    color: white;
     font-size: 13px;
-    margin: 4px;
-    background: rgba(255,255,255,0.2);
 }
 
-.rating-tag {
-    color: #ffbd35;
+.rating-tag i {
+    color: #ffd166;
 }
 
 .hero-title {
-    font-size: 30px;
-    margin-top: 12px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.6;
 }
 
 .maps-btn {
-    background: #087c68;
-    color: white;
-    padding: 11px 17px;
-    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 12px 18px;
+
+    background: #ffffff;
+    color: #245c43;
+
     text-decoration: none;
+    font-size: 14px;
     font-weight: 700;
+
+    border-radius: 10px;
     white-space: nowrap;
+
+    transition: 0.3s;
 }
 
-/* CONTENT */
+.maps-btn:hover {
+    background: #e5f3e9;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   4. CONTENT BODY
+===================================== */
 
 .content-body {
-    padding: 25px;
+    padding: 35px 40px;
 }
 
 .section-title {
-    font-size: 19px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    color: #245c43;
+
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 15px;
+
+    margin-bottom: 18px;
 }
 
 .section-title i {
-    color: #0a927b;
-    margin-right: 7px;
+    color: #39855d;
+    font-size: 20px;
 }
 
 .description-text {
-    line-height: 2;
-    color: #626b6c;
+    color: #68756e;
+
     font-size: 15px;
-    margin-bottom: 30px;
+    line-height: 2;
+
+    margin-bottom: 35px;
 }
 
-/* SUB HEADER */
+
+/* =====================================
+   5. SUB DESTINATIONS HEADER
+===================================== */
 
 .sub-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 12px;
+
+    margin-bottom: 22px;
+}
+
+.sub-header .section-title {
+    margin-bottom: 0;
 }
 
 .sub-count {
-    color: #0a927b;
+    color: #8b9990;
     font-size: 13px;
+    font-weight: 400;
 }
 
 .hint-text {
-    color: #999;
-    font-size: 12px;
+    color: #8b9990;
+    font-size: 13px;
 }
 
-/* GRID */
+.hint-text i {
+    color: #39855d;
+    margin-right: 5px;
+}
+
+
+/* =====================================
+   6. GENERAL CARD GRID
+===================================== */
 
 .sub-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 24px;
+    width: 100%;
 }
 
-/* SUB CARD */
+
+/* =====================================
+   7. CARD DESIGN
+===================================== */
 
 .sub-card {
-    background: white;
-    border: 1px solid #e5ebea;
-    border-radius: 15px;
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-    transition: 0.3s;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
 }
 
 .sub-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    transform: translateY(-7px);
+
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+
+    border-color: #b8d8c5;
 }
 
-/* IMAGE */
 
-.img-container {
-    height: 190px;
-    width: 100%;
+/* =====================================
+   8. CARD IMAGE
+===================================== */
+
+.sub-card-image {
     position: relative;
+
+    width: 100%;
+    height: 200px;
+
     overflow: hidden;
 }
 
-.img-container img {
+.sub-card-image img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
-    transition: transform 0.3s;
+
+    display: block;
+
+    transition: transform 0.5s ease;
 }
 
-.img-container:hover img {
-    transform: scale(1.06);
+.sub-card:hover .sub-card-image img {
+    transform: scale(1.08);
 }
 
-/* EXPAND BUTTON - ZOOM ICON */
+
+/* =====================================
+   9. EXPAND BUTTON
+===================================== */
 
 .expand-btn {
     position: absolute;
-    right: 15px;
-    bottom: 15px;
 
-    width: 20px;
-    height: 20px;
+    top: 12px;
+    right: 12px;
+
+    width: 38px;
+    height: 38px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
+    background: rgba(255, 255, 255, 0.95);
+
+    color: #263b32;
 
     border: none;
-    border-radius: 18px;
+    border-radius: 50%;
 
-    font-size: 24px;
+    font-size: 15px;
+
     cursor: pointer;
 
-    transition: 0.3s;
-    z-index: 2;
+    transition: all 0.3s ease;
 }
 
 .expand-btn:hover {
-    background: #087c68;
+    background: #2e7955;
+    color: #ffffff;
+
     transform: scale(1.1);
 }
 
-.expand-btn i {
-    pointer-events: none;
+
+/* =====================================
+   10. CARD CONTENT
+===================================== */
+
+.sub-card-content {
+    padding: 18px;
 }
 
-/* CARD TEXT */
+.sub-card-content h3 {
+    color: #202b26;
 
-.sub-card-title {
-    padding: 12px 13px 5px;
-    font-size: 16px;
+    font-family: 'Kantumruy Pro', sans-serif;
+
+    font-size: 17px;
     font-weight: 700;
+
+    line-height: 1.7;
+
+    margin-bottom: 10px;
 }
 
-.sub-card-desc {
-    padding: 0 13px 15px;
-    font-size: 13px;
-    color: #778080;
+.sub-card-content p {
+    color: #68756e;
+
+    font-family: 'Kantumruy Pro', sans-serif;
+
+    font-size: 14px;
+    font-weight: 400;
+
     line-height: 1.9;
+
+    margin: 0;
 }
 
-/* TIP BOX */
+
+/* =====================================
+   11. RECOMMENDATION BOX
+===================================== */
 
 .tip-box {
-    margin-top: 30px;
-    padding: 18px;
-    background: #edfaf6;
-    border-radius: 12px;
     display: flex;
-    gap: 13px;
     align-items: flex-start;
+    gap: 15px;
+
+    margin-top: 35px;
+    padding: 22px;
+
+    background: #f0f8f2;
+
+    border-left: 4px solid #39855d;
+    border-radius: 12px;
 }
 
 .tip-icon {
-    color: #e9a323;
-    font-size: 22px;
+    color: #e5a82e;
+    font-size: 25px;
+    margin-top: 3px;
 }
 
 .tip-title {
+    color: #245c43;
+
+    font-size: 16px;
     font-weight: 700;
-    margin-bottom: 5px;
-    color: #087c68;
+
+    margin-bottom: 8px;
 }
 
 .tip-desc {
-    color: #687777;
+    color: #68756e;
+
     font-size: 14px;
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
-/* IMAGE ZOOM VIEWER */
+
+/* =====================================
+   12. IMAGE ZOOM VIEWER
+===================================== */
 
 .zoom-viewer {
-    display: none;
     position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.94);
-    z-index: 9999;
-    justify-content: center;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
     align-items: center;
-    padding: 25px;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    z-index: 9999;
 }
 
 .zoom-viewer.active {
@@ -281,30 +429,47 @@ body {
 .zoom-viewer img {
     max-width: 90%;
     max-height: 85vh;
+
     object-fit: contain;
-    border-radius: 12px;
+
+    border-radius: 10px;
+
     animation: zoomIn 0.3s ease;
 }
 
 .zoom-close {
     position: absolute;
+
     top: 20px;
-    right: 25px;
-    background: rgba(255,255,255,0.15);
-    color: white;
-    border: none;
-    font-size: 32px;
-    cursor: pointer;
+    right: 30px;
+
     width: 45px;
     height: 45px;
-    border-radius: 50%;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 40px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
-/* ZOOM ANIMATION */
+.zoom-close:hover {
+    color: #ff7777;
+    transform: rotate(90deg);
+}
+
+
+/* IMAGE ANIMATION */
 
 @keyframes zoomIn {
     from {
-        transform: scale(0.7);
+        transform: scale(0.8);
         opacity: 0;
     }
 
@@ -314,51 +479,102 @@ body {
     }
 }
 
-/* TABLET */
 
-@media (max-width: 768px) {
+/* =====================================
+   13. TABLET RESPONSIVE
+===================================== */
 
-    .detail-card {
-        margin: 10px;
-    }
+@media screen and (max-width: 992px) {
 
     .sub-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
+        gap: 20px;
+    }
+
+    .sub-card-image {
+        height: 210px;
+    }
+
+    .content-body {
+        padding: 30px;
+    }
+
+}
+
+
+/* =====================================
+   14. MOBILE RESPONSIVE
+===================================== */
+
+@media screen and (max-width: 576px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .hero-banner {
+        min-height: 300px;
+        padding: 65px 20px 25px;
+    }
+
+    .hero-title-row {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .hero-title {
         font-size: 24px;
     }
-}
-
-/* MOBILE */
-
-@media (max-width: 480px) {
-
-    .sub-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .content-body {
-        padding: 15px;
-    }
-
-    .img-container {
-        height: 200px;
-    }
-
-    .hero-banner {
-        min-height: 240px;
-        padding: 18px;
-    }
-
-    .hero-title {
-        font-size: 21px;
-    }
 
     .maps-btn {
         font-size: 12px;
+        padding: 10px 13px;
+    }
+
+    .content-body {
+        padding: 22px 15px;
+    }
+
+    .section-title {
+        font-size: 17px;
+    }
+
+    .sub-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .sub-card {
+        border-radius: 14px;
+    }
+
+    .sub-card-image {
+        height: 230px;
+    }
+
+    .sub-card-content {
+        padding: 15px;
+    }
+
+    .sub-card-content h3 {
+        font-size: 16px;
+    }
+
+    .sub-card-content p {
+        font-size: 14px;
+    }
+
+    .sub-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .tip-box {
+        padding: 16px;
+    }
+
+    .zoom-viewer {
+        padding: 15px;
     }
 
     .zoom-viewer img {
@@ -366,9 +582,29 @@ body {
         max-height: 80vh;
     }
 
-    .expand-btn {
-        width: 55px;
-        height: 55px;
+}
+
+
+/* =====================================
+   15. SMALL MOBILE
+===================================== */
+
+@media screen and (max-width: 380px) {
+
+    .sub-card-image {
+        height: 190px;
+    }
+
+    .hero-title {
         font-size: 21px;
     }
+
+    .sub-card-content h3 {
+        font-size: 15px;
+    }
+
+    .sub-card-content p {
+        font-size: 13px;
+    }
+
 }
