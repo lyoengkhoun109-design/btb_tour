@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
+.logo{
+    margin-left: 20px;
+}
 .nav-container{
     margin: 0;
     display: flex;
@@ -62,7 +64,7 @@
 .nav-left-side #logout{
     background-color: rgba(39, 39, 234, 0.899);
     color: #f4f4f4;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 .nav-left-side #logout:hover{
     background-color: rgb(13, 13, 216);

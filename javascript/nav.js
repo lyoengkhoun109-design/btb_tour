@@ -7,10 +7,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
             document.getElementById("nav-container").innerHTML = data;
 
-            
-        const home =document.getElementById("home");
-        const login =document.getElementById("logout");
-        const emergency =document.getElementById("emergency");
+        const home = document.getElementById("home");
+        const place = document.getElementById("place");
+        const login = document.getElementById("logout");
+        const emergency = document.getElementById("emergency");
+
+        // Navigation
+        place.addEventListener("click", function(){
+            window.location.href = "/html/afterhome.html";
+        });
+
+        home.addEventListener("click", function(){
+            window.location.href = "/html/home.html";
+        });
+
+        // Automatically change navbar color
+        const currentPage = window.location.pathname;
+
+        if (currentPage === "/html/home.html") {
+            home.style.color = "black";
+            home.style.fontWeight = "700";
+        }
+        else if (currentPage === "/html/afterhome.html") {
+            place.style.color = "black";
+            place.style.fontWeight = "700";
+        }
+        
 
         login.addEventListener("click", function(){
             window.location.href="/html/login.html";
