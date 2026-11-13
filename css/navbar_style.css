@@ -57,7 +57,10 @@
 }
 .nav_left_side #logout i{
     font-weight: bold;
-    rotate: 180deg;
+}
+#logout{
+    display: flex;
+    gap: 5px;
 }
 
 

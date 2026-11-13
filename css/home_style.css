@@ -161,14 +161,15 @@ option::checkmark{
     display: flex;
     justify-content: space-between;
 }
+
+
 #mini_card_switch,
 #mini_card_more{
     background-color: rgb(255, 255, 255);
     border-radius: 25px;
     margin-bottom: 10px;
     padding: 10px;
-    box-shadow: 0 0 10px 1.5px rgba(0, 0, 0, 0.1) ;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    box-shadow: 0 0 10px 1.5px rgba(0, 0, 0, 0.1);
 }
 #mini_card_more{
     height: 110px;
@@ -185,19 +186,55 @@ option::checkmark{
 
 
 #all_region{
-    overflow: auto;
     height: 180px;
 }
+#all_region ul{
+    list-style: none;
+}
 #all_region ul li{
-    border-top: 1px solid rgb(203, 203, 203);
+    /* border-top: 1px solid rgb(203, 203, 203); */ 
     padding: 10px;
     cursor: pointer;
     margin-bottom: 10px;
+    position: relative;
 }
 #all_region ul li:hover{
     background-color: #d4d4d451;
     border-radius: 14px;
 }
+
+#pp_thing,
+#Tdnal{
+    position: relative;
+}
+
+#Tdnal #two_op,
+#pp_thing #three_op{
+    position: absolute;
+    background-color: #f4f4f4f4;
+    border-radius: 9px;
+    display: none;
+    left: 100%;
+    top: 0;
+    width: 150px;
+    z-index: 1000;
+    
+}
+
+#Tdnal:hover #two_op ,
+#pp_thing:hover #three_op{
+    display: block;
+}
+#two_op li,
+#three_op li{
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
 
 #mini_card2{
     width: 32%;
@@ -268,4 +305,49 @@ option::checkmark{
 
 #locat_place:hover{
     transform: scale(1.05);
+}
+
+/* card more information */
+
+#more_info #name_place,
+#more_info #rate_place,
+#more_info #more_detail{
+    position: relative;
+    margin: 10px;
+    color: bl;
+}
+
+/* detail info */
+#mini_card_more{
+    position: relative;
+}
+/* #mini_card_more #detail_info,
+#mini_card_more i{
+    bo
+} */
+
+
+#detail_info{
+    background-color: rgb(244, 184, 227);
+    width: 95%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px auto;
+    position: relative;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+#detail_info:hover{
+    transform: scale(1.02)
+}
+
+#detail_info i{
+    background-color: #f4f4f4;
+    padding: 10px;
+    top: -3px;
+    right: 0;
+    position: absolute;
+    border-radius: 10px;
+    font-size: 20pt;
+    
 }

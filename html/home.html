@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/home_style.css">  
+    <link rel="stylesheet" href="/css/home_style.css">
     <link rel="stylesheet" href="/css/navbar_style.css">
-    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
 </head>
@@ -61,14 +62,29 @@
                 <p>Regions</p>
                 <div id="all_region">
                     <ul>
-                        <li>Natural 1</li>
-                        <li>Tranditional 2</li>
-                        <li>Popular 3</li>
+                        <li id="natural_place">Natural</li>
+                        <li id="Tdnal">Tranditional
+                            <ul id="two_op">
+                                <li id="Td_place">Place</li>
+                                <li id="Td_food">Local Food</li>
+                            </ul>
+                        </li>
+                        <li id="pp_thing">Popular
+                            <ul id="three_op">
+                                <li id="pp_place">Place</li>
+                                <li id="pp_hotel">Hotels</li>
+                                <li id="pp_food">Local Food</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div id="mini_card_more">
-                <p>details about regions</p>
+                <div id="detail_info">
+                    More Details
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                
             </div>
 
         </div>
@@ -79,40 +95,20 @@
                     <img src="/images/btb_round.jpg" alt="">
                 </div>
                 <div id="more_info">
-                    more
+                    <div id="name_place">name Place</div>
+                    <div id="rate_place">Rate Place</div>
+                    <a id="more_detail" href="#">See more</a>
+                    
                 </div>
                 <div id="locat_place">
                     <a href="#"><i class="bx bx-location-alt-2"></i>location</a>
                 </div>
             </div>
-            <div id="mini_card2">
-                <div id="card_image">
-                    <img src="/images/btb_round.jpg" alt="">
-                </div>
-                
-                <div id="more_info">
-                    more
-                </div>
-                <div id="locat_place">
-                    <a href="#"><i class="bx bx-location-alt-2"></i>location</a>
-                </div>
-            </div>
-            <div id="mini_card2">
-                <div id="card_image">
-                    <img src="/images/btb_round.jpg" alt="">
-                </div>
-                <div id="more_info">
-                    more
-                </div>
-                <div id="locat_place">
-                    <a href="#"><i class="bx bx-location-alt-2"></i>location</a>
-                </div>
-            </div>
+            
         </div>
-    </div>
 
-    <script src="/javascript/home_event.js"></script>
-    
+        <script src="/javascript/home_event.js"></script>
+
 
 </body>
 

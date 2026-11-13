@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const place = document.getElementById("place");
         const login = document.getElementById("logout");
         const emer = document.getElementById("emergency");
+        const hotel = document.getElementById("hotel");
+        const food = document.getElementById("food");
 
         // Navigation
         place.addEventListener("click", function(){
@@ -23,30 +25,38 @@ document.addEventListener("DOMContentLoaded", function () {
         emer.addEventListener("click", function(){
             window.location.href = "/html/emergency.html";
         });
+        login.addEventListener("click", function(){
+            window.location.href="/html/login.html";
+        });
 
+        hotel.addEventListener("click", function(){
+            window.location.href = "/html/hotel.html";
+        });
+        food.addEventListener("click", function(){
+            window.location.href = "/html/foodgency.html";
+        });
 
         // Automatically change navbar color
         const currentPage = window.location.pathname;
 
-        if (currentPage === "/html/home.html") {
-            home.style.color = "black";
-            home.style.fontWeight = "700";
-        }
-        else if (currentPage === "/html/afterhome.html") {
-            place.style.color = "black";
-            place.style.fontWeight = "700";
-        }else if (currentPage === "/html/emergency.html") {
-            emer.style.color = "black";
-            emer.style.fontWeight = "700";
+        const navLinks = {
+            "/html/home.html": home,
+            "/html/afterhome.html": place,
+            "/html/emergency.html": emer,
+            "/html/hotel.html": hotel,
+            "/html/food.html": food
+        };
+
+        const activeLink = navLinks[currentPage];
+
+        if (activeLink) {
+            activeLink.style.color = "black";
+            activeLink.style.fontWeight = "700";
         }
         
-
-        login.addEventListener("click", function(){
-            window.location.href="/html/login.html";
-        });
         })
         .catch(error => console.log(error));
 
-});
+    });
 
 
