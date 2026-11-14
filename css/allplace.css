@@ -80,6 +80,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    flex-wrap: wrap;
 
     gap: 20px;
 }
@@ -219,7 +220,7 @@ body {
 .sub-grid {
     display: grid;
 
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
 
     gap: 24px;
     width: 100%;
@@ -487,7 +488,6 @@ body {
 @media screen and (max-width: 992px) {
 
     .sub-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 20px;
     }
 
@@ -529,6 +529,9 @@ body {
     .maps-btn {
         font-size: 12px;
         padding: 10px 13px;
+        max-width: 100%;
+        white-space: normal;
+        text-align: center;
     }
 
     .content-body {
@@ -540,7 +543,6 @@ body {
     }
 
     .sub-grid {
-        grid-template-columns: 1fr;
         gap: 18px;
     }
 

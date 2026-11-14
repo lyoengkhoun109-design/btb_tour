@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTB Tour | Hotels</title>
+
+    <link rel="stylesheet" href="/css/foodandhotelnavbar.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="home.html" class="logo">BTB TOUR</a>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="/html/placenavbar.html">Place</a>
+            <a href="/html/hotelnavbar.html" class="active">Hotels</a>
+            <a href="/html/foodnavbar.html">Food</a>
+            <a href="/html/servicenavbar.html">Service</a>
+            <a href="/html/battambangnavbar.html">Battambang</a>
+        </div>
+
+        <div class="nav-right">
+            <a href="#language">Languages</a>
+            <a href="emergency.html">Emergency</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero hotel-hero">
+        <div class="hero-content">
+            <span>FIND YOUR PERFECT STAY</span>
+            <h1>Discover Hotels in Battambang</h1>
+            <p>Find comfortable places to stay during your visit to Battambang.</p>
+        </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="search-section">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search hotels...">
+            <button onclick="searchCards()">Search</button>
+        </div>
+    </section>
+
+    <!-- HOTEL SECTION -->
+    <main class="main-container">
+
+        <div class="section-heading">
+            <div>
+                <span class="small-title">STAY WITH COMFORT</span>
+                <h2>Popular Hotels</h2>
+                <p>Explore accommodation options for your Battambang trip.</p>
+            </div>
+        </div>
+
+        <!-- FILTER -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterCards('all', this)">All Hotels</button>
+            <button class="filter-btn" onclick="filterCards('luxury', this)">Luxury</button>
+            <button class="filter-btn" onclick="filterCards('resort', this)">Resort</button>
+            <button class="filter-btn" onclick="filterCards('budget', this)">Budget</button>
+            <button class="filter-btn" onclick="filterCards('boutique', this)">Boutique</button>
+        </div>
+
+        <!-- HOTEL CARDS -->
+        <div class="card-grid" id="cardGrid">
+
+            <!-- HOTEL 1 -->
+            <article class="tour-card" data-category="luxury">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800" alt="Classy Hotel">
+                    <span class="card-tag">Luxury</span>
+                </div>
+                <div class="card-content">
+                    <h3>Classy Hotel & Spa</h3>
+                    <p class="description">A hotel option offering comfortable rooms and facilities for travelers.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang City</span>
+                        <span><i class="fa-solid fa-star"></i> Check reviews</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Check hotel</span>
+                        <span class="rating"><i class="fa-solid fa-bed"></i> Hotel</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Contact the property to confirm room types, facilities, availability, and current prices before booking.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- HOTEL 2 -->
+            <article class="tour-card" data-category="boutique">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800" alt="Maisons Wat Kor">
+                    <span class="card-tag">Boutique</span>
+                </div>
+                <div class="card-content">
+                    <h3>Maisons Wat Kor</h3>
+                    <p class="description">A boutique accommodation option with a peaceful atmosphere and garden setting.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Wat Kor Area</span>
+                        <span><i class="fa-solid fa-star"></i> Check reviews</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Check hotel</span>
+                        <span class="rating"><i class="fa-solid fa-bed"></i> Hotel</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Check the hotel's official booking information for room availability, amenities, and current rates.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- HOTEL 3 -->
+            <article class="tour-card" data-category="resort">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=800" alt="Battambang Resort">
+                    <span class="card-tag">Resort</span>
+                </div>
+                <div class="card-content">
+                    <h3>Battambang Resort</h3>
+                    <p class="description">A relaxing accommodation option surrounded by a natural environment.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang</span>
+                        <span><i class="fa-solid fa-star"></i> Check reviews</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Check hotel</span>
+                        <span class="rating"><i class="fa-solid fa-bed"></i> Resort</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Check directly with the property for its room options, swimming pool facilities, and booking details.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- HOTEL 4 -->
+            <article class="tour-card" data-category="boutique">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800" alt="Bambu Hotel">
+                    <span class="card-tag">Boutique</span>
+                </div>
+                <div class="card-content">
+                    <h3>Bambu Hotel</h3>
+                    <p class="description">A boutique hotel option for visitors looking for a comfortable city stay.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang City</span>
+                        <span><i class="fa-solid fa-star"></i> Check reviews</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Check hotel</span>
+                        <span class="rating"><i class="fa-solid fa-bed"></i> Hotel</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Contact the property for room information, current rates, and reservation details.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- HOTEL 5 -->
+            <article class="tour-card" data-category="budget">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800" alt="Comfortable Guesthouse">
+                    <span class="card-tag">Budget</span>
+                </div>
+                <div class="card-content">
+                    <h3>Comfortable Guesthouse</h3>
+                    <p class="description">A sample budget accommodation card for visitors seeking affordable stays.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang</span>
+                        <span><i class="fa-solid fa-star"></i> Check reviews</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Check property</span>
+                        <span class="rating"><i class="fa-solid fa-bed"></i> Guesthouse</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>This is a sample listing. Replace it with a real guesthouse name, location, contact information, and booking link.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- HOTEL 6 -->
+            <article class="tour-card" data-category="luxury">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800" alt="Premium Hotel">
+                    <span class="card-tag">Luxury</span>
+                </div>
+                <div class="card-content">
+                    <h3>Premium City Hotel</h3>
+                    <p class="description">A sample premium hotel listing for travelers looking for a comfortable city stay.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang</span>
+                        <span><i class="fa-solid fa-star"></i> Check reviews</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Check property</span>
+                        <span class="rating"><i class="fa-solid fa-bed"></i> Hotel</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>This is a sample listing. Replace it with a verified hotel, its facilities, and an official booking link.</p>
+                    </details>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="no-results" id="noResults">No hotel found. Please try another search.</p>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h3>BTB TOUR</h3>
+        <p>Discover the beauty, culture, food, and hospitality of Battambang.</p>
+        <p>© 2026 BTB Tour. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        let currentCategory = "all";
+
+        function filterCards(category, button) {
+            currentCategory = category;
+
+            document.querySelectorAll(".filter-btn").forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+            searchCards();
+        }
+
+        function searchCards() {
+            const searchValue = document.getElementById("searchInput").value.toLowerCase();
+            const cards = document.querySelectorAll(".tour-card");
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                const category = card.dataset.category;
+
+                const matchesSearch = text.includes(searchValue);
+                const matchesCategory = currentCategory === "all" || category === currentCategory;
+
+                if (matchesSearch && matchesCategory) {
+                    card.style.display = "block";
+                    visibleCount++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            document.getElementById("noResults").style.display =
+                visibleCount === 0 ? "block" : "none";
+        }
+
+        document.getElementById("searchInput").addEventListener("input", searchCards);
+    </script>
+
+</body>
+</html>

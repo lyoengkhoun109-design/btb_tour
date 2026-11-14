@@ -160,10 +160,8 @@ body {
 .sub-grid {
     display: grid; /* ប្រើ CSS Grid */
 
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    /* បង្កើត 3 Columns ក្នុងមួយជួរ */
-    /* 1fr មានន័យថាចែកទទឹងឱ្យស្មើគ្នា */
-    /* minmax(0, 1fr) អនុញ្ញាតឱ្យ Column រួញតូចបាន */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    /* កំណត់ចំនួន Column តាមទទឹងដែលនៅសល់ */
 
     gap: 20px; /* ចន្លោះរវាង Card 20px */
 }
@@ -368,9 +366,6 @@ body {
     }
 
     .sub-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        /* បង្ហាញ 2 Cards ក្នុងមួយជួរ */
-
         gap: 12px;             /* ចន្លោះ Card 12px */
     }
 
@@ -386,11 +381,6 @@ body {
 
 @media (max-width: 480px) {
     /* ដំណើរការនៅពេលអេក្រង់ <= 480px */
-
-    .sub-grid {
-        grid-template-columns: 1fr;
-        /* បង្ហាញ Card មួយក្នុងមួយជួរ */
-    }
 
     .content-body {
         padding: 15px;         /* បន្ថយគម្លាតខាងក្នុង */
@@ -411,6 +401,9 @@ body {
 
     .maps-btn {
         font-size: 12px;       /* ទំហំអក្សរប៊ូតុង */
+        max-width: 100%;
+        white-space: normal;
+        text-align: center;
     }
 
     .zoom-viewer img {

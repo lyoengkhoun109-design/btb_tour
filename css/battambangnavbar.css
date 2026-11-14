@@ -1,0 +1,1117 @@
+/* =====================================
+   GEOGRAPHY BOOK PAGE
+===================================== */
+
+.geo-hero {
+    width: calc(100% - 80px);
+    min-height: 430px;
+    margin: 20px auto;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 55px;
+
+    background-image: url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600");
+    background-size: cover;
+    background-position: center;
+}
+
+.geo-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.15));
+}
+
+.geo-hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    max-width: 650px;
+}
+
+.geo-hero-content span {
+    color: #ffd36b;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.geo-hero-content h1 {
+    font-size: 44px;
+    margin: 15px 0;
+}
+
+.geo-hero-content p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+
+/* BOOK PAGE NUMBER */
+
+.book-page-number {
+    width: 85%;
+    max-width: 1200px;
+    margin: 25px auto;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #888;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* GEOGRAPHY CONTAINER */
+
+.geo-container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 80px auto;
+}
+
+.geo-heading {
+    margin-bottom: 30px;
+}
+
+.geo-heading h2 {
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.geo-heading p {
+    color: #777;
+    line-height: 1.8;
+}
+
+
+/* INTRODUCTION */
+
+.geo-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.geo-intro-image {
+    height: 340px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.geo-intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.geo-intro-text h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.geo-intro-text p {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+
+/* FACTS */
+
+.geo-facts {
+    background: #f0f3f8;
+    padding: 75px 8%;
+}
+
+.geo-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.geo-fact-card {
+    background: white;
+    padding: 28px 15px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.geo-fact-card:hover {
+    transform: translateY(-6px);
+}
+
+.geo-fact-card i {
+    color: #3157ce;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.geo-fact-card h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.geo-fact-card p {
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* BOUNDARIES */
+
+.boundary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.boundary-card {
+    text-align: center;
+    background: white;
+    padding: 25px 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    border-bottom: 4px solid #3157ce;
+}
+
+.boundary-card i {
+    font-size: 25px;
+    color: #3157ce;
+    margin-bottom: 12px;
+}
+
+.boundary-card h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.boundary-card p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* LANDSCAPE */
+
+.landscape-section {
+    padding: 80px 7%;
+    background: #f0f3f8;
+}
+
+.landscape-grid {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.landscape-card {
+    background: white;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.landscape-card:hover {
+    transform: translateY(-7px);
+}
+
+.landscape-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.landscape-content {
+    padding: 22px;
+}
+
+.landscape-content h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.landscape-content p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.8;
+}
+
+
+/* RIVERS AND WATER */
+
+.water-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.water-image {
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.water-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.water-content h3 {
+    color: #3157ce;
+    font-size: 20px;
+    margin: 15px 0 8px;
+}
+
+.water-content p {
+    color: #777;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+
+/* DISTRICTS */
+
+.district-section {
+    padding: 80px 7%;
+    background: #f0f3f8;
+}
+
+.district-grid {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.district-card {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.district-card:hover {
+    transform: translateY(-5px);
+    background: #e9edff;
+}
+
+.district-card span {
+    color: #3157ce;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.district-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.district-card p {
+    font-size: 13px;
+    color: #888;
+}
+
+
+/* CLIMATE */
+
+.climate-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.climate-card {
+    padding: 30px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.climate-card i {
+    color: #3157ce;
+    font-size: 35px;
+}
+
+.climate-card h3 {
+    font-size: 22px;
+    margin: 15px 0 8px;
+}
+
+.climate-card span {
+    color: #3157ce;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.climate-card p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 12px;
+}
+
+
+/* NATURAL RESOURCES */
+
+.resource-section {
+    background: #f0f3f8;
+    padding: 80px 7%;
+}
+
+.resource-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.resource-card {
+    background: white;
+    padding: 30px 22px;
+    text-align: center;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.resource-card:hover {
+    transform: translateY(-6px);
+}
+
+.resource-card i {
+    color: #3157ce;
+    font-size: 35px;
+}
+
+.resource-card h3 {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.resource-card p {
+    color: #777;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+
+/* BOOK NAVIGATION */
+
+.book-navigation {
+    width: 85%;
+    max-width: 1200px;
+    margin: 70px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.book-prev-btn,
+.book-next-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 22px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.book-prev-btn {
+    color: #3157ce;
+    background: #e9edff;
+}
+
+.book-next-btn {
+    color: white;
+    background: #3157ce;
+}
+
+.book-prev-btn:hover,
+.book-next-btn:hover {
+    transform: translateY(-4px);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .geo-intro-grid,
+    .water-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .geo-facts-grid,
+    .district-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .landscape-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .boundary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .geo-hero {
+        width: calc(100% - 30px);
+        min-height: 350px;
+        padding: 25px;
+    }
+
+    .geo-hero-content h1 {
+        font-size: 30px;
+    }
+
+    .geo-container {
+        width: 90%;
+        margin: 55px auto;
+    }
+
+    .geo-facts,
+    .district-section,
+    .resource-section,
+    .landscape-section {
+        padding: 55px 5%;
+    }
+
+    .geo-facts-grid,
+    .district-grid,
+    .landscape-grid,
+    .resource-grid,
+    .climate-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .boundary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .book-navigation {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .book-prev-btn,
+    .book-next-btn {
+        justify-content: center;
+    }
+
+    .book-page-number {
+        width: 90%;
+        font-size: 10px;
+    }
+
+    .geo-heading h2 {
+        font-size: 25px;
+    }
+}
+
+/* =================================
+   1. GENERAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kantumruy Pro', sans-serif;
+    background: #f7f8fa;
+    color: #20272b;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =================================
+   2. NAVBAR
+================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 35px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #3157ce;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a,
+.nav-right a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #777;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-right a:hover,
+.nav-links a.active {
+    color: #3157ce;
+}
+
+.nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+/* =================================
+   3. HERO BANNER
+================================= */
+
+.hero {
+    width: calc(100% - 80px);
+    min-height: 350px;
+    margin: 20px auto;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.1));
+}
+
+.food-hero {
+    background-image: url("https://images.unsplash.com/photo-1547592180-85f173990554?w=1600");
+}
+
+.hotel-hero {
+    background-image: url("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600");
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+}
+
+.hero-content span {
+    color: #ffd36b;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin: 12px 0;
+    line-height: 1.3;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* =================================
+   4. SEARCH SECTION
+================================= */
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin-top: -48px;
+    position: relative;
+    z-index: 2;
+}
+
+.search-box {
+    width: 65%;
+    min-height: 85px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+}
+
+.search-box i {
+    color: #3157ce;
+    font-size: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.search-box button {
+    background: #3157ce;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #203fa7;
+}
+
+/* =================================
+   5. MAIN CONTAINER
+================================= */
+
+.main-container {
+    width: 85%;
+    max-width: 1250px;
+    margin: 85px auto 70px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.small-title {
+    color: #3157ce;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    margin: 7px 0;
+}
+
+.section-heading p {
+    color: #777;
+    font-size: 15px;
+}
+
+/* =================================
+   6. FILTER BUTTONS
+================================= */
+
+.filter-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    padding: 10px 22px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #555;
+    border-radius: 25px;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #3157ce;
+    border-color: #3157ce;
+    color: white;
+}
+
+/* =================================
+   7. CARD GRID - 3 CARDS PER ROW
+================================= */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+/* =================================
+   8. TOUR CARD
+================================= */
+
+.tour-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 0;
+}
+
+.tour-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
+}
+
+/* =================================
+   9. CARD IMAGE
+================================= */
+
+.card-image {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.tour-card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+.card-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ffd36b;
+    color: #222;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =================================
+   10. CARD CONTENT
+================================= */
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+    color: #20272b;
+}
+
+.description {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.7;
+    min-height: 70px;
+}
+
+/* =================================
+   11. CARD INFORMATION
+================================= */
+
+.card-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    margin: 18px 0;
+    color: #777;
+    font-size: 12px;
+}
+
+.card-info i {
+    color: #3157ce;
+    margin-right: 5px;
+}
+
+/* =================================
+   12. PRICE AND RATING
+================================= */
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.price {
+    font-size: 13px;
+    font-weight: 700;
+    color: #3157ce;
+}
+
+.rating {
+    font-size: 12px;
+    color: #e8a600;
+    white-space: nowrap;
+}
+
+/* =================================
+   13. SEE MORE DETAILS
+================================= */
+
+.more-details {
+    margin-top: 18px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.more-details summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f3f5ff;
+    color: #3157ce;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.more-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.more-details summary:hover {
+    background: #3157ce;
+    color: white;
+}
+
+.more-details[open] summary i {
+    transform: rotate(90deg);
+}
+
+.more-details p {
+    padding: 15px 5px 5px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* =================================
+   14. NO RESULTS
+================================= */
+
+.no-results {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    color: #777;
+    font-size: 17px;
+}
+
+/* =================================
+   15. FOOTER
+================================= */
+
+.footer {
+    background: #202c3b;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer h3 {
+    color: #ffd36b;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.footer p {
+    color: #ccc;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+/* =================================
+   16. TABLET RESPONSIVE
+================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .main-container {
+        width: 90%;
+    }
+
+    .search-box {
+        width: 80%;
+    }
+}
+
+/* =================================
+   17. MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a,
+    .nav-right a {
+        font-size: 13px;
+    }
+
+    .nav-right {
+        gap: 15px;
+    }
+
+    .hero {
+        width: calc(100% - 30px);
+        min-height: 270px;
+        padding: 25px;
+        border-radius: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 29px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .search-box {
+        width: 90%;
+        min-height: 65px;
+        padding: 10px 15px;
+        gap: 8px;
+    }
+
+    .search-box input {
+        font-size: 13px;
+    }
+
+    .search-box button {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .main-container {
+        width: 90%;
+        margin-top: 65px;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .filter-buttons {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .card-image {
+        height: 220px;
+    }
+
+    .card-content h3 {
+        font-size: 19px;
+    }
+
+    .footer {
+        padding: 30px 15px;
+    }
+}

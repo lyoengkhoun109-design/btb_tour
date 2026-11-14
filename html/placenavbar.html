@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTB Tour | Places</title>
+
+    <link rel="stylesheet" href="/css/foodandhotelnavbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="home.html" class="logo">BTB TOUR</a>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="place.html" class="active">Place</a>
+            <a href="/html/hotelnavbar.html">Hotels</a>
+            <a href="/html/foodnavbar.html">Food</a>
+            <a href="service.html">Service</a>
+            <a href="battambang.html">Battambang</a>
+        </div>
+
+        <div class="nav-right">
+            <a href="#language">Languages</a>
+            <a href="emergency.html">Emergency</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero place-hero">
+        <div class="hero-content">
+            <span>EXPLORE BATTAMBANG</span>
+            <h1>Discover Beautiful Places</h1>
+            <p>Explore mountains, temples, caves, nature and cultural attractions in Battambang.</p>
+        </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="search-section">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search tourist places...">
+            <button onclick="searchCards()">Search</button>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="main-container">
+
+        <div class="section-heading">
+            <div>
+                <span class="small-title">TRAVEL AND EXPLORE</span>
+                <h2>Popular Places in Battambang</h2>
+                <p>Find interesting destinations for your next adventure.</p>
+            </div>
+        </div>
+
+        <!-- FILTER -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterCards('all', this)">All Places</button>
+            <button class="filter-btn" onclick="filterCards('natural', this)">Natural</button>
+            <button class="filter-btn" onclick="filterCards('traditional', this)">Traditional</button>
+            <button class="filter-btn" onclick="filterCards('popular', this)">Popular</button>
+        </div>
+
+        <!-- PLACE CARDS -->
+        <div class="card-grid">
+
+            <!-- CARD 1 -->
+            <article class="tour-card" data-category="natural popular">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Phnom Sampeau">
+                    <span class="card-tag">Natural</span>
+                </div>
+                <div class="card-content">
+                    <h3>Phnom Sampeau</h3>
+                    <p class="description">A famous mountain destination known for its caves, beautiful views and bat cave experience.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Phnom Sampeau, Battambang</span>
+                        <span><i class="fa-solid fa-mountain"></i> Mountain</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Tourist Attraction</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> Popular</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Phnom Sampeau is one of Battambang's well-known destinations. Visitors can explore its caves, pagodas and panoramic scenery. The bat exodus at sunset is a famous attraction.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- CARD 2 -->
+            <article class="tour-card" data-category="traditional popular">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=800" alt="Wat Banan">
+                    <span class="card-tag">Traditional</span>
+                </div>
+                <div class="card-content">
+                    <h3>Wat Banan</h3>
+                    <p class="description">An ancient Khmer temple located on a hill with beautiful countryside views.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Banan District</span>
+                        <span><i class="fa-solid fa-landmark"></i> Temple</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Historical Place</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> Popular</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Wat Banan is a historic Khmer temple featuring five towers. Visitors climb the staircase to explore the temple and enjoy views of the surrounding landscape.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- CARD 3 -->
+            <article class="tour-card" data-category="traditional">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?w=800" alt="Ek Phnom Temple">
+                    <span class="card-tag">Traditional</span>
+                </div>
+                <div class="card-content">
+                    <h3>Ek Phnom Temple</h3>
+                    <p class="description">An ancient temple with Khmer architectural details and historical importance.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Ek Phnom Area</span>
+                        <span><i class="fa-solid fa-landmark"></i> Temple</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Historical Place</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> Heritage</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Ek Phnom is a historic Angkorian temple in Battambang. The site is known for its sandstone remains and nearby modern pagoda.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- CARD 4 -->
+            <article class="tour-card" data-category="popular">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800" alt="Battambang Bamboo Train">
+                    <span class="card-tag">Popular</span>
+                </div>
+                <div class="card-content">
+                    <h3>Bamboo Train</h3>
+                    <p class="description">Experience a unique local rail ride through the countryside of Battambang.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang</span>
+                        <span><i class="fa-solid fa-train"></i> Experience</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Tourist Activity</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> Popular</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>The Bamboo Train, also known as Norry, is a distinctive local railway experience. Check current operating arrangements before visiting.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- CARD 5 -->
+            <article class="tour-card" data-category="natural">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800" alt="Battambang countryside">
+                    <span class="card-tag">Natural</span>
+                </div>
+                <div class="card-content">
+                    <h3>Battambang Countryside</h3>
+                    <p class="description">Enjoy peaceful rural scenery, rice fields, local villages and traditional farming life.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang Province</span>
+                        <span><i class="fa-solid fa-leaf"></i> Nature</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Nature Experience</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> Relaxing</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Explore the countryside to discover local villages, agricultural landscapes, traditional houses and the everyday life of local communities.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- CARD 6 -->
+            <article class="tour-card" data-category="traditional popular">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800" alt="Battambang city">
+                    <span class="card-tag">Popular</span>
+                </div>
+                <div class="card-content">
+                    <h3>Battambang City</h3>
+                    <p class="description">Discover colonial architecture, local markets, riverside scenery and city culture.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang City</span>
+                        <span><i class="fa-solid fa-city"></i> City Tour</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">City Attraction</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> Popular</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Walk around Battambang to explore historic buildings, local markets, riverside areas and the city's distinctive cultural atmosphere.</p>
+                    </details>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="no-results" id="noResults">No places found. Please try another search.</p>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h3>BTB TOUR</h3>
+        <p>Discover the beauty, culture, food, and hospitality of Battambang.</p>
+        <p>© 2026 BTB Tour. All Rights Reserved.</p>
+    </footer>
+
+    <!-- SEARCH AND FILTER -->
+    <script>
+        let currentCategory = "all";
+
+        function filterCards(category, button) {
+            currentCategory = category;
+
+            document.querySelectorAll(".filter-btn").forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+            searchCards();
+        }
+
+        function searchCards() {
+            const searchValue = document.getElementById("searchInput").value.toLowerCase();
+            const cards = document.querySelectorAll(".tour-card");
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                const categories = card.dataset.category.split(" ");
+
+                const matchesSearch = text.includes(searchValue);
+                const matchesCategory =
+                    currentCategory === "all" || categories.includes(currentCategory);
+
+                if (matchesSearch && matchesCategory) {
+                    card.style.display = "block";
+                    visibleCount++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            document.getElementById("noResults").style.display =
+                visibleCount === 0 ? "block" : "none";
+        }
+
+        document.getElementById("searchInput").addEventListener("input", searchCards);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,581 @@
+
+/* =================================
+   1. GENERAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kantumruy Pro', sans-serif;
+    background: #f7f8fa;
+    color: #20272b;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =================================
+   2. NAVBAR
+================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 35px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #3157ce;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a,
+.nav-right a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #777;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-right a:hover,
+.nav-links a.active {
+    color: #3157ce;
+}
+
+.nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+/* =================================
+   3. HERO BANNER
+================================= */
+
+.hero {
+    width: calc(100% - 80px);
+    min-height: 350px;
+    margin: 20px auto;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.1)
+    );
+}
+
+.food-hero {
+    background-image: url("https://images.unsplash.com/photo-1547592180-85f173990554?w=1600");
+}
+
+.hotel-hero {
+    background-image: url("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600");
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+}
+
+.hero-content span {
+    color: #ffd36b;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin: 12px 0;
+    line-height: 1.3;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* =================================
+   4. SEARCH SECTION
+================================= */
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin-top: -48px;
+    position: relative;
+    z-index: 2;
+}
+
+.search-box {
+    width: 65%;
+    min-height: 85px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+}
+
+.search-box i {
+    color: #3157ce;
+    font-size: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.search-box button {
+    background: #3157ce;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #203fa7;
+}
+
+/* =================================
+   5. MAIN CONTAINER
+================================= */
+
+.main-container {
+    width: 85%;
+    max-width: 1250px;
+    margin: 85px auto 70px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.small-title {
+    color: #3157ce;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    margin: 7px 0;
+}
+
+.section-heading p {
+    color: #777;
+    font-size: 15px;
+}
+
+/* =================================
+   6. FILTER BUTTONS
+================================= */
+
+.filter-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    padding: 10px 22px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #555;
+    border-radius: 25px;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #3157ce;
+    border-color: #3157ce;
+    color: white;
+}
+
+/* =================================
+   7. CARD GRID - 3 CARDS PER ROW
+================================= */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+/* =================================
+   8. TOUR CARD
+================================= */
+
+.tour-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 0;
+}
+
+.tour-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
+}
+
+/* =================================
+   9. CARD IMAGE
+================================= */
+
+.card-image {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.tour-card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+.card-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ffd36b;
+    color: #222;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =================================
+   10. CARD CONTENT
+================================= */
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+    color: #20272b;
+}
+
+.description {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.7;
+    min-height: 70px;
+}
+
+/* =================================
+   11. CARD INFORMATION
+================================= */
+
+.card-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    margin: 18px 0;
+    color: #777;
+    font-size: 12px;
+}
+
+.card-info i {
+    color: #3157ce;
+    margin-right: 5px;
+}
+
+/* =================================
+   12. PRICE AND RATING
+================================= */
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.price {
+    font-size: 13px;
+    font-weight: 700;
+    color: #3157ce;
+}
+
+.rating {
+    font-size: 12px;
+    color: #e8a600;
+    white-space: nowrap;
+}
+
+/* =================================
+   13. SEE MORE DETAILS
+================================= */
+
+.more-details {
+    margin-top: 18px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.more-details summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f3f5ff;
+    color: #3157ce;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.more-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.more-details summary:hover {
+    background: #3157ce;
+    color: white;
+}
+
+.more-details[open] summary i {
+    transform: rotate(90deg);
+}
+
+.more-details p {
+    padding: 15px 5px 5px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* =================================
+   14. NO RESULTS
+================================= */
+
+.no-results {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    color: #777;
+    font-size: 17px;
+}
+
+/* =================================
+   15. FOOTER
+================================= */
+
+.footer {
+    background: #202c3b;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer h3 {
+    color: #ffd36b;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.footer p {
+    color: #ccc;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+/* =================================
+   16. TABLET RESPONSIVE
+================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .main-container {
+        width: 90%;
+    }
+
+    .search-box {
+        width: 80%;
+    }
+}
+
+/* =================================
+   17. MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a,
+    .nav-right a {
+        font-size: 13px;
+    }
+
+    .nav-right {
+        gap: 15px;
+    }
+
+    .hero {
+        width: calc(100% - 30px);
+        min-height: 270px;
+        padding: 25px;
+        border-radius: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 29px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .search-box {
+        width: 90%;
+        min-height: 65px;
+        padding: 10px 15px;
+        gap: 8px;
+    }
+
+    .search-box input {
+        font-size: 13px;
+    }
+
+    .search-box button {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .main-container {
+        width: 90%;
+        margin-top: 65px;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .filter-buttons {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .card-image {
+        height: 220px;
+    }
+
+    .card-content h3 {
+        font-size: 19px;
+    }
+
+    .footer {
+        padding: 30px 15px;
+    }
+}

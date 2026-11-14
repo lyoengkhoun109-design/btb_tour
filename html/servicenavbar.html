@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTB Tour | Services</title>
+
+    <link rel="stylesheet" href="/css/foodandhotelnavbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="home.html" class="logo">BTB TOUR</a>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="/html/placenavbar.html">Place</a>
+            <a href="/html/hotelnavbar.html">Hotels</a>
+            <a href="/html/foodnavbar.html">Food</a>
+            <a href="/html/servicenavbar.html" class="active">Service</a>
+            <a href="/html/battambangnavbar.html">Battambang</a>
+        </div>
+
+        <div class="nav-right">
+            <a href="#language">Languages</a>
+            <a href="emergency.html">Emergency</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero service-hero">
+        <div class="hero-content">
+            <span>TRAVEL WITH COMFORT</span>
+            <h1>Tourism Services</h1>
+            <p>Find useful travel services to make your Battambang journey easier and more enjoyable.</p>
+        </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="search-section">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search services...">
+            <button onclick="searchCards()">Search</button>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="main-container">
+
+        <div class="section-heading">
+            <div>
+                <span class="small-title">TRAVEL MADE EASY</span>
+                <h2>Our Tourism Services</h2>
+                <p>Discover helpful services for your trip around Battambang.</p>
+            </div>
+        </div>
+
+        <!-- FILTER -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterCards('all', this)">All Services</button>
+            <button class="filter-btn" onclick="filterCards('transport', this)">Transport</button>
+            <button class="filter-btn" onclick="filterCards('guide', this)">Tour Guide</button>
+            <button class="filter-btn" onclick="filterCards('rental', this)">Rental</button>
+            <button class="filter-btn" onclick="filterCards('travel', this)">Travel Help</button>
+        </div>
+
+        <!-- SERVICE CARDS -->
+        <div class="card-grid">
+
+            <!-- CARD 1 -->
+            <article class="tour-card" data-category="transport">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1593766827228-8737b6cd1472?w=800" alt="Tuk Tuk Service">
+                    <span class="card-tag">Transport</span>
+                </div>
+                <div class="card-content">
+                    <h3>Tuk Tuk Service</h3>
+                    <p class="description">Travel around Battambang city and visit nearby attractions using local tuk tuk transport.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang</span>
+                        <span><i class="fa-solid fa-motorcycle"></i> Transport</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Ask driver</span>
+                        <span class="rating"><i class="fa-solid fa-car"></i> Local</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Tuk tuk transportation is a convenient way to explore the city and nearby tourist attractions. Agree on the price and destination with the driver before starting your trip.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- CARD 2 -->
+            <article class="tour-card" data-category="guide">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=800" alt="Local Tour Guide">
+                    <span class="card-tag">Tour Guide</span>
+                </div>
+                <div class="card-content">
+                    <h3>Local Tour Guide</h3>
+                    <p class="description">Discover Battambang with local guides who can introduce the area's culture and history.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang</span>
+                        <span><i class="fa-solid fa-user-tie"></i> Guide</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Contact guide</span>
+                        <span class="rating"><i class="fa-solid fa-users"></i> Service</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>A local guide can help visitors understand local traditions, historical attractions, communities and popular destinations. Confirm language, availability and fees in advance.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- CARD 3 -->
+            <article class="tour-card" data-category="rental">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=800" alt="Bicycle Rental">
+                    <span class="card-tag">Rental</span>
+                </div>
+                <div class="card-content">
+                    <h3>Bicycle Rental</h3>
+                    <p class="description">Explore the city and peaceful countryside at your own pace by bicycle.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang City</span>
+                        <span><i class="fa-solid fa-bicycle"></i> Rental</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Ask rental shop</span>
+                        <span class="rating"><i class="fa-solid fa-leaf"></i> Eco Travel</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Bicycle rental gives visitors a flexible way to explore local streets and rural areas. Check bicycle condition, rental duration and deposit requirements.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- CARD 4 -->
+            <article class="tour-card" data-category="transport">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800" alt="Car Rental">
+                    <span class="card-tag">Transport</span>
+                </div>
+                <div class="card-content">
+                    <h3>Car Rental</h3>
+                    <p class="description">Arrange private vehicle transportation for family trips and group travel.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang</span>
+                        <span><i class="fa-solid fa-car"></i> Transport</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Contact provider</span>
+                        <span class="rating"><i class="fa-solid fa-road"></i> Travel</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Private car services can be useful for visiting destinations outside the city. Confirm driver arrangements, insurance, vehicle type and total cost before booking.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- CARD 5 -->
+            <article class="tour-card" data-category="travel">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800" alt="Travel Assistance">
+                    <span class="card-tag">Travel Help</span>
+                </div>
+                <div class="card-content">
+                    <h3>Travel Assistance</h3>
+                    <p class="description">Get help with trip planning, transportation arrangements and travel information.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang</span>
+                        <span><i class="fa-solid fa-headset"></i> Assistance</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Contact provider</span>
+                        <span class="rating"><i class="fa-solid fa-handshake"></i> Support</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Travel assistance can help visitors organize their itinerary, understand local transportation and find useful travel information.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- CARD 6 -->
+            <article class="tour-card" data-category="guide travel">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800" alt="Countryside Tour">
+                    <span class="card-tag">Travel Experience</span>
+                </div>
+                <div class="card-content">
+                    <h3>Countryside Tour</h3>
+                    <p class="description">Experience local village life, rural scenery, traditional culture and countryside activities.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang Province</span>
+                        <span><i class="fa-solid fa-map"></i> Tour</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Ask tour provider</span>
+                        <span class="rating"><i class="fa-solid fa-seedling"></i> Experience</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>A countryside tour can introduce visitors to local communities, agriculture, traditional houses and the rural landscape of Battambang.</p>
+                    </details>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="no-results" id="noResults">No services found. Please try another search.</p>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h3>BTB TOUR</h3>
+        <p>Discover the beauty, culture, food, and hospitality of Battambang.</p>
+        <p>© 2026 BTB Tour. All Rights Reserved.</p>
+    </footer>
+
+    <!-- SEARCH AND FILTER -->
+    <script>
+        let currentCategory = "all";
+
+        function filterCards(category, button) {
+            currentCategory = category;
+
+            document.querySelectorAll(".filter-btn").forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+            searchCards();
+        }
+
+        function searchCards() {
+            const searchValue = document.getElementById("searchInput").value.toLowerCase();
+            const cards = document.querySelectorAll(".tour-card");
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                const categories = card.dataset.category.split(" ");
+
+                const matchesSearch = text.includes(searchValue);
+                const matchesCategory =
+                    currentCategory === "all" || categories.includes(currentCategory);
+
+                if (matchesSearch && matchesCategory) {
+                    card.style.display = "block";
+                    visibleCount++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            document.getElementById("noResults").style.display =
+                visibleCount === 0 ? "block" : "none";
+        }
+
+        document.getElementById("searchInput").addEventListener("input", searchCards);
+    </script>
+
+</body>
+</html>

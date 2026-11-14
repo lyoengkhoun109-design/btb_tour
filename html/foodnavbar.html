@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTB Tour | Food</title>
+
+    <link rel="stylesheet" href="/css/foodandhotelnavbar.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="home.html" class="logo">BTB TOUR</a>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="/html/placenavbar.html">Place</a>
+            <a href="/html/hotelnavbar.html">Hotels</a>
+            <a href="/html/foodnavbar.html" class="active">Food</a>
+            <a href="service.html">Service</a>
+            <a href="battambang.html">Battambang</a>
+        </div>
+
+        <div class="nav-right">
+            <a href="#language">Languages</a>
+            <a href="emergency.html">Emergency</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero food-hero">
+        <div class="hero-content">
+            <span>DISCOVER KHMER CUISINE</span>
+            <h1>Explore Cambodian Food</h1>
+            <p>Discover delicious traditional food and local tastes in Battambang.</p>
+        </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="search-section">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search food...">
+            <button onclick="searchCards()">Search</button>
+        </div>
+    </section>
+
+    <!-- FOOD SECTION -->
+    <main class="main-container">
+
+        <div class="section-heading">
+            <div>
+                <span class="small-title">TASTE OF CAMBODIA</span>
+                <h2>Popular Khmer Food</h2>
+                <p>Enjoy traditional Cambodian dishes and local specialties.</p>
+            </div>
+        </div>
+
+        <!-- FILTER -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterCards('all', this)">All Food</button>
+            <button class="filter-btn" onclick="filterCards('noodle', this)">Noodles</button>
+            <button class="filter-btn" onclick="filterCards('rice', this)">Rice</button>
+            <button class="filter-btn" onclick="filterCards('traditional', this)">Traditional</button>
+            <button class="filter-btn" onclick="filterCards('dessert', this)">Dessert</button>
+        </div>
+
+        <!-- FOOD CARDS -->
+        <div class="card-grid" id="cardGrid">
+
+            <!-- CARD 1 -->
+            <article class="tour-card" data-category="traditional">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=800" alt="Fish Amok">
+                    <span class="card-tag">Traditional</span>
+                </div>
+                <div class="card-content">
+                    <h3>Fish Amok</h3>
+                    <p class="description">A famous Khmer dish made with fish, coconut milk, and traditional curry spices.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang</span>
+                        <span><i class="fa-solid fa-utensils"></i> Khmer Food</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Ask restaurant</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> Popular</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Fish Amok is a traditional Cambodian curry steamed with coconut milk and kroeung spices. It is often served with rice.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- CARD 2 -->
+            <article class="tour-card" data-category="noodle">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800" alt="Nom Banh Chok">
+                    <span class="card-tag">Noodles</span>
+                </div>
+                <div class="card-content">
+                    <h3>Nom Banh Chok</h3>
+                    <p class="description">Fresh rice noodles served with delicious Khmer green fish curry sauce and vegetables.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang</span>
+                        <span><i class="fa-solid fa-utensils"></i> Khmer Food</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Ask restaurant</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> Popular</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Nom Banh Chok is a popular Cambodian breakfast dish made with rice noodles, fish gravy, fresh herbs, and vegetables.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- CARD 3 -->
+            <article class="tour-card" data-category="rice">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800" alt="Khmer Fried Rice">
+                    <span class="card-tag">Rice</span>
+                </div>
+                <div class="card-content">
+                    <h3>Khmer Fried Rice</h3>
+                    <p class="description">Fried rice cooked with vegetables, egg, and tasty Cambodian seasoning.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang</span>
+                        <span><i class="fa-solid fa-utensils"></i> Rice Dish</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Ask restaurant</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> Popular</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>A convenient and tasty rice dish that can be enjoyed for lunch or dinner.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- CARD 4 -->
+            <article class="tour-card" data-category="rice">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?w=800" alt="Beef Lok Lak">
+                    <span class="card-tag">Rice</span>
+                </div>
+                <div class="card-content">
+                    <h3>Beef Lok Lak</h3>
+                    <p class="description">Stir-fried beef served with fresh vegetables, rice, and pepper-lime sauce.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang</span>
+                        <span><i class="fa-solid fa-utensils"></i> Khmer Food</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Ask restaurant</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> Popular</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Beef Lok Lak is a popular Cambodian stir-fried beef dish, usually served with rice and a tangy dipping sauce.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- CARD 5 -->
+            <article class="tour-card" data-category="noodle">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800" alt="Kuy Teav">
+                    <span class="card-tag">Noodles</span>
+                </div>
+                <div class="card-content">
+                    <h3>Kuy Teav</h3>
+                    <p class="description">A warm rice noodle soup with meat, herbs, vegetables, and flavorful broth.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang</span>
+                        <span><i class="fa-solid fa-utensils"></i> Khmer Food</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Ask restaurant</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> Popular</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Kuy Teav is a Cambodian noodle soup commonly enjoyed as breakfast or lunch.</p>
+                    </details>
+                </div>
+            </article>
+
+            <!-- CARD 6 -->
+            <article class="tour-card" data-category="dessert">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800" alt="Khmer Dessert">
+                    <span class="card-tag">Dessert</span>
+                </div>
+                <div class="card-content">
+                    <h3>Khmer Sweet Dessert</h3>
+                    <p class="description">Sweet Cambodian treats prepared with coconut milk, rice, and local ingredients.</p>
+                    <div class="card-info">
+                        <span><i class="fa-solid fa-location-dot"></i> Battambang</span>
+                        <span><i class="fa-solid fa-ice-cream"></i> Dessert</span>
+                    </div>
+                    <div class="card-bottom">
+                        <span class="price">Price: Ask seller</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> Popular</span>
+                    </div>
+                    <details class="more-details">
+                        <summary>See More <i class="fa-solid fa-arrow-right"></i></summary>
+                        <p>Khmer desserts come in many varieties, often using coconut, palm sugar, sticky rice, and tropical fruits.</p>
+                    </details>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="no-results" id="noResults">No food found. Please try another search.</p>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h3>BTB TOUR</h3>
+        <p>Discover the beauty, culture, food, and hospitality of Battambang.</p>
+        <p>© 2026 BTB Tour. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        let currentCategory = "all";
+
+        function filterCards(category, button) {
+            currentCategory = category;
+
+            document.querySelectorAll(".filter-btn").forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+            searchCards();
+        }
+
+        function searchCards() {
+            const searchValue = document.getElementById("searchInput").value.toLowerCase();
+            const cards = document.querySelectorAll(".tour-card");
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                const category = card.dataset.category;
+
+                const matchesSearch = text.includes(searchValue);
+                const matchesCategory = currentCategory === "all" || category === currentCategory;
+
+                if (matchesSearch && matchesCategory) {
+                    card.style.display = "block";
+                    visibleCount++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            document.getElementById("noResults").style.display =
+                visibleCount === 0 ? "block" : "none";
+        }
+
+        document.getElementById("searchInput").addEventListener("input", searchCards);
+    </script>
+
+</body>
+</html>
