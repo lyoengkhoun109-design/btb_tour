@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Kantumruy Pro', sans-serif;
     min-height: 140vh;
     position: relative;
     flex-wrap: wrap;
@@ -19,7 +19,7 @@ body{
     display: block;
     width: 78%;
     height: 400px;
-    margin: 0 auto;
+    margin: 20px auto;
     border-radius: 30px;
     object-fit: cover;
 }
@@ -347,4 +347,127 @@ option::checkmark{
     border-radius: 10px;
     font-size: 20pt;
     
+}
+
+
+/* =================================
+   16. TABLET RESPONSIVE
+================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .main-container {
+        width: 90%;
+    }
+
+    .search-box {
+        width: 80%;
+    }
+}
+
+/* =================================
+   17. MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a,
+    .nav-right a {
+        font-size: 13px;
+    }
+
+    .nav-right {
+        gap: 15px;
+    }
+
+    .hero {
+        width: calc(100% - 30px);
+        min-height: 270px;
+        padding: 25px;
+        border-radius: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 29px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .search-box {
+        width: 90%;
+        min-height: 65px;
+        padding: 10px 15px;
+        gap: 8px;
+    }
+
+    .search-box input {
+        font-size: 13px;
+    }
+
+    .search-box button {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .main-container {
+        width: 90%;
+        margin-top: 65px;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .filter-buttons {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .card-image {
+        height: 220px;
+    }
+
+    .card-content h3 {
+        font-size: 19px;
+    }
+
+    .footer {
+        padding: 30px 15px;
+    }
 }

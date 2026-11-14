@@ -2,106 +2,90 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
-.logo{
-    margin-left: 20px;
+body{
+    font-family: 'Kantumruy Pro', sans-serif;
 }
-.nav-container{
-    margin: 0;
+
+.navbar {
+    width: 100%;
+    min-height: 70px;
+    background: rgba(255, 255, 255, 0.812);
     display: flex;
     align-items: center;
-    width: 100%;
     justify-content: space-between;
-    background-color: #ffffffc4;
-    font-weight: 700;
+    padding: 15px 35px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+    backdrop-filter: blur(1.8px);
 }
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #3157ce;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a,
+.nav-right a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #777;
+    transition: 0.3s;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-right a:hover,
+.nav-links a.active{
+    color: #3157ce;
+    background-color: #f4f4f4f4;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.nav-right {
+    display: inline;
+    gap: 20px;
+}
+.nav-right a{
+    margin: 0 9px;
+}
+
+.nav-right #lang_bar{
+    text-align: center;
+    display: inline;
+}
+#logoutBtn i{
+    position: relative;
+    font-size: 15pt;
+    top: 4.2px;
+}
+#lang_bar i{
+    font-size: 16pt
+}
+
+
 #nav-container{
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 1000;
 }
 
-.navbar ul li,
-.nav_left_side ul li {
-    list-style: none;
-    color: gray;
+#logoutBtn{
+    background-color: #3157ce;
+    color: #ffff;
     padding: 10px;
-    font-size: 14pt;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.navbar ul,
-.nav_left_side ul{
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    color: gray;
-    padding: 10px 10px;
-    font-size: 14pt;
-    border-radius: 20px;
-}
-/* .navbar a, 
-.nav_left_side a{
-    text-decoration: none;
-    color: gray;
-    display: block; ដើម្បីអោយ​ link fill div have to use display: block;
-    padding: 10px 10px;
-    font-size: 14pt;
-    border-radius: 20px;
-} */
-.navbar ul li:hover{
-    background-color: #f4f4f4;
-    border-radius: 20px;
-}
-.nav_left_side #logout i{
-    font-weight: bold;
-}
-#logout{
-    display: flex;
-    gap: 5px;
-}
-
-
-.nav_left_side #logout{
-    background-color: rgba(39, 39, 234, 0.899);
-    color: #f4f4f4;
-    margin-right: 20px;
-}
-.nav_left_side #logout:hover{
-    background-color: rgb(13, 13, 216);
-}
-
-.nav_left_side #emergency:hover{
-    background-color: #f4f4f4;
-    border-radius: 20px;
-}
-
-/* NAVBAR LINKS */
-.navbar a,
-.nav_left_side a {
-    text-decoration: none;
-    color: gray;
-    display: block;
-    padding: 10px 10px;
-    font-size: 14pt;
-    border-radius: 20px;
-}
-
-/* NAVBAR HOVER */
-.navbar ul li:hover,
-.nav_left_side #emergency:hover {
-    background-color: #f4f4f4;
-    border-radius: 20px;
-}
-
-/* LOGOUT LINK */
-.nav_left_side #logout a {
-    color: #f4f4f4;
-}
-
-/* LOGOUT ICON */
-.nav_left_side #logout i {
-    font-weight: bold;
 }
