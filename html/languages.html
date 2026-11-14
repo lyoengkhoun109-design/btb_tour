@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BTB TOUR - Languages</title>
+
+    <link rel="stylesheet" href="/css/navbar_style.css">
+    <link rel="stylesheet" href="/css/languages.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div id="nav-container"></div>
+
+    <!-- LANGUAGE PAGE -->
+    <section class="language-page">
+
+        <h1 data-i18n="chooseLanguage">
+            Choose Your Language
+        </h1>
+
+        <p data-i18n="languageDescription">
+            Please select your preferred language
+        </p>
+
+        <div class="language-container">
+
+            <!-- ENGLISH -->
+            <div class="language-card">
+
+                <div class="flag">🇬🇧</div>
+
+                <h2 data-i18n="english">English</h2>
+
+                <p data-i18n="exploreEnglish">
+                    Explore BTB TOUR in English
+                </p>
+
+                <button
+                    onclick="changeLanguage('en')"
+                    data-i18n="selectEnglish">
+                    Select English
+                </button>
+
+            </div>
+
+            <!-- KHMER -->
+            <div class="language-card">
+
+                <div class="flag">🇰🇭</div>
+
+                <h2 data-i18n="khmer">
+                    ភាសាខ្មែរ
+                </h2>
+
+                <p data-i18n="exploreKhmer">
+                    ស្វែងយល់អំពីខេត្តបាត់ដំបង
+                </p>
+
+                <button
+                    onclick="changeLanguage('km')"
+                    data-i18n="selectKhmer">
+                    ជ្រើសរើសភាសាខ្មែរ
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- BACK HOME -->
+        <a href="/html/home.html" data-i18n="backHome">
+            Back to Home
+        </a>
+
+    </section>
+
+    <!-- JAVASCRIPT: LOAD ONLY ONCE -->
+    <script src="/javascript/translations.js"></script>
+    <script src="/javascript/language.js"></script>
+    <script src="/javascript/nav.js"></script>
+
+</body>
+</html>

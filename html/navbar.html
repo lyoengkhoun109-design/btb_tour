@@ -1,38 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/navbar_style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="nav-container">
-        <div class="logo">
-            <p>LOGO</p>
-        </div>
-        <div class="navbar">
-            <ul>
-                <li id="home"><a href="/html/home.html">Home</a></li>
-                <li id="place"><a href="/html/placenavbar.html">Place</a></li>
-                <li id="hotel"><a href="/html/hotelnavbar.html">Hotels</a></li>
-                <li id="food"><a href="/html/foodnavbar.html">Food</a></li>
-                <li id="service"><a href="/html/servicenavbar.html">Service</a></li>
-                <li id="battambang"><a href="/html/battambangnavbar.html">Battambang</a></li>
-            </ul>
-        </div>
 
-        <div class="nav_left_side">
-            <ul>
-                <li id="language">Languages</li>
-                <li id="emergency">Emergency</li>
-                <li id="logout">Logout <i class="bx bx-arrow-out-right-square-half"></i></li>
-            </ul>
-        </div>
+<div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo">
+        <p data-i18n="logo">BTB TOUR</p>
     </div>
 
-    <script src="/javascript/nav.js"></script>
-</body>
-</html>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <ul>
+
+            <li id="home">
+                <a href="/html/home.html" data-i18n="home">Home</a>
+            </li>
+
+            <li id="place">
+                <a href="/html/placenavbar.html" data-i18n="place">Place</a>
+            </li>
+
+            <li id="hotel">
+                <a href="/html/hotelnavbar.html" data-i18n="hotels">Hotels</a>
+            </li>
+
+            <li id="food">
+                <a href="/html/foodnavbar.html" data-i18n="food">Food</a>
+            </li>
+
+            <li id="service">
+                <a href="/html/servicenavbar.html" data-i18n="service">Service</a>
+            </li>
+
+            <li id="battambang">
+                <a href="/html/battambangnavbar.html" data-i18n="battambang">Battambang</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="nav_left_side">
+        <ul>
+
+            <li id="language">
+                <a href="/html/languages.html" data-i18n="languages">Languages</a>
+            </li>
+
+            <li id="emergency">
+                <a href="/html/emergency.html" data-i18n="emergency">Emergency</a>
+            </li>
+
+            <li id="logout">
+                <a href="#" data-i18n="logout">Logout</a>
+                <i class="bx bx-arrow-out-right-square-half"></i>
+            </li>
+
+        </ul>
+    </div>
+
+</div>

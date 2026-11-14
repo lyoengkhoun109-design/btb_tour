@@ -1,35 +1,44 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>BTB TOUR - Home</title>
+
     <link rel="stylesheet" href="/css/home_style.css">
     <link rel="stylesheet" href="/css/navbar_style.css">
+
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-    
-    <!-- add navbar just use this and add link style of nave bar -->
+    <!-- NAVBAR -->
     <div id="nav-container"></div>
-    <script src="/javascript/nav.js"></script>
 
+    <!-- MAIN CONTENT -->
     <div class="main-content">
+
         <div id="banner">
-            <img src="/images/kamping-puoy.jpg" alt="">
+            <img src="/images/kamping-puoy.jpg" alt="Kamping Puoy">
         </div>
 
         <form>
-            <div id="s-info"> <!-- ចាំមើលញុមដាក់ javascript លើវាបានឡូយ -->
+            <div id="s-info">
+
                 <div id="select-container">
+
                     <select name="select_location" id="location">
-                        <option value="" selected disabled>Locations</option>
+                        <option value="" selected disabled data-i18n="locations">
+                            Locations
+                        </option>
                         <option value="">a</option>
                         <option value="">c</option>
                         <option value="">x</option>
@@ -42,79 +51,121 @@
                         <option value="">k</option>
                         <option value="">l</option>
                     </select>
+
                     <select name="select_day" id="Num_day">
-                        <option value="" selected disabled>Day</option>
+                        <option value="" selected disabled data-i18n="day">
+                            Day
+                        </option>
                     </select>
+
                     <select name="select_guest" id="guest">
-                        <option value="" selected disabled>Guest</option>
+                        <option value="" selected disabled data-i18n="guest">
+                            Guest
+                        </option>
                     </select>
+
                     <div id="search">
                         <button id="search-btn">
                             <span class="material-symbols-outlined">search</span>
-                            Search
+                            <span data-i18n="search">Search</span>
                         </button>
                     </div>
+
                 </div>
             </div>
         </form>
+
     </div>
+
+    <!-- PLACE CONTAINER -->
     <div class="place_container">
+
         <div class="sec_card">
+
             <div id="mini_card_switch">
-                <p>Regions</p>
+
+                <p data-i18n="regions">Regions</p>
+
                 <div id="all_region">
+
                     <ul>
-                        <li id="natural_place">Natural</li>
-                        <li id="Tdnal">Tranditional
+                        <li id="natural_place" data-i18n="natural">
+                            Natural
+                        </li>
+
+                        <li id="Tdnal">
+                            <span data-i18n="traditional">Traditional</span>
+
                             <ul id="two_op">
-                                <li id="Td_place">Place</li>
-                                <li id="Td_food">Local Food</li>
+                                <li id="Td_place" data-i18n="place">Place</li>
+                                <li id="Td_food" data-i18n="food">Local Food</li>
                             </ul>
                         </li>
-                        <li id="pp_thing">Popular
+
+                        <li id="pp_thing">
+                            <span data-i18n="popular">Popular</span>
+
                             <ul id="three_op">
-                                <li id="pp_place">Place</li>
-                                <li id="pp_hotel">Hotels</li>
-                                <li id="pp_food">Local Food</li>
+                                <li id="pp_place" data-i18n="place">Place</li>
+                                <li id="pp_hotel" data-i18n="hotels">Hotels</li>
+                                <li id="pp_food" data-i18n="food">Local Food</li>
                             </ul>
                         </li>
                     </ul>
+
                 </div>
             </div>
+
             <div id="mini_card_more">
+
                 <div id="detail_info">
-                    More Details
-                    <i class='bx bx-chevron-right'></i>
+                    <span data-i18n="moreDetails">More Details</span>
+                    <i class="bx bx-chevron-right"></i>
                 </div>
-                <!-- <div id="detail_info">
-                    More Details
-                    <i class='bx bx-chevron-right'></i>
-                </div> -->
+
             </div>
 
         </div>
-        <!-- popular place card -->
+
+        <!-- POPULAR PLACE CARD -->
         <div class="th_card">
+
             <div id="mini_card2">
+
                 <div id="card_image">
-                    <img src="/images/btb_round.jpg" alt="">
+                    <img src="/images/btb_round.jpg" alt="Battambang">
                 </div>
+
                 <div id="more_info">
+
                     <div id="name_place">name Place</div>
+
                     <div id="rate_place">Rate Place</div>
-                    <a id="more_detail" href="#">See more</a>
-                    
+
+                    <a id="more_detail" href="#" data-i18n="seeMore">
+                        See more
+                    </a>
+
                 </div>
+
                 <div id="locat_place">
-                    <a href="#"><i class="bx bx-location-alt-2"></i>location</a>
+                    <a href="#">
+                        <i class="bx bx-location-alt-2"></i>
+                        <span data-i18n="location">Location</span>
+                    </a>
                 </div>
+
             </div>
-            
+
         </div>
 
-        <script src="/javascript/home_event.js"></script>
+    </div>
 
+    <!-- JAVASCRIPT: LOAD ONLY ONCE -->
+    <script src="/javascript/translations.js"></script>
+    <script src="/javascript/language.js"></script>
+    <script src="/javascript/nav.js"></script>
+    <script src="/javascript/home_event.js"></script>
 
 </body>
-
 </html>

@@ -77,3 +77,31 @@
     background-color: #f4f4f4;
     border-radius: 20px;
 }
+
+/* NAVBAR LINKS */
+.navbar a,
+.nav_left_side a {
+    text-decoration: none;
+    color: gray;
+    display: block;
+    padding: 10px 10px;
+    font-size: 14pt;
+    border-radius: 20px;
+}
+
+/* NAVBAR HOVER */
+.navbar ul li:hover,
+.nav_left_side #emergency:hover {
+    background-color: #f4f4f4;
+    border-radius: 20px;
+}
+
+/* LOGOUT LINK */
+.nav_left_side #logout a {
+    color: #f4f4f4;
+}
+
+/* LOGOUT ICON */
+.nav_left_side #logout i {
+    font-weight: bold;
+}
