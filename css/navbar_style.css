@@ -49,7 +49,8 @@ body{
 
 .nav-links a:hover,
 .nav-right a:hover,
-.nav-links a.active{
+.nav-links a.active,
+.nav-right a.active{
     color: #3157ce;
     background-color: #f4f4f4f4;
     padding: 10px;
