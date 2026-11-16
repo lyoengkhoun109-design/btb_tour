@@ -364,6 +364,8 @@ a {
     gap: 8px;
     padding-top: 15px;
     border-top: 1px solid #eee;
+   
+    
 }
 
 .price {
@@ -378,50 +380,63 @@ a {
     white-space: nowrap;
 }
 
+
 /* =================================
-   13. SEE MORE DETAILS
+   13. SEE MORE DETAILS - HOVER
 ================================= */
 
 .more-details {
-    margin-top: 18px;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
-}
-
-.more-details summary {
-    list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+
+    width: 100%;
+    margin-top: 18px;
+    margin-bottom: 20px;
+
+    padding: 15px;
+
     background: #f3f5ff;
     color: #3157ce;
-    padding: 12px 15px;
+
+    border: none;
     border-radius: 10px;
+
     font-size: 14px;
     font-weight: 700;
+
+    text-decoration: none;
+    list-style: none;
     cursor: pointer;
-    transition: 0.3s;
+
+    transition: all 0.3s ease;
 }
 
-.more-details summary::-webkit-details-marker {
-    display: none;
-}
-
-.more-details summary:hover {
+/* HOVER WHOLE BOX */
+.more-details:hover {
     background: #3157ce;
     color: white;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 6px 15px rgba(49, 87, 206, 0.25);
 }
 
-.more-details[open] summary i {
-    transform: rotate(90deg);
+/* ARROW ANIMATION */
+.more-details i {
+    transition: transform 0.3s ease;
 }
 
-.more-details p {
-    padding: 15px 5px 5px;
-    font-size: 14px;
-    line-height: 1.8;
-    color: #666;
+.more-details:hover i {
+    transform: translateX(6px);
 }
+
+/* KEYBOARD FOCUS */
+.more-details:focus-visible {
+    outline: 2px solid #3157ce;
+    outline-offset: 3px;
+}
+
 
 /* =================================
    14. NO RESULTS
