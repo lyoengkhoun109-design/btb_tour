@@ -132,35 +132,177 @@ option::checkmark{
 
 /* place card */
 
-.place_container{
-    width: 78%;
-    justify-content: space-around;
+.place_container {
+    width: 90%;
     display: flex;
-    gap: 15px ;    
+    gap: 15px;
     margin: 150px auto;
-
 }
 
-
 .sec_card,
-.th_card{
+.cardContainer{
     height: 350px;
     border-radius: 30px;
     text-align: center;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
 }
 
 .sec_card{
     width: 25%;
 }
 
-.th_card{
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
+.cardContainer{
+    width: 80%;
+    
+    overflow: hidden;
+    align-items: center;
+
+    touch-action: pan-y;
+    cursor: grab;
+    user-select: none;
 }
+
+.cardContainer:active {
+    cursor: grabbing;
+}
+
+.card-window {
+    width: 81%;
+    height: 100%;
+    overflow: hidden;
+    touch-action: pan-y;
+    cursor: grab;
+    user-select: none;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+#main_card{
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    transition: transform 0.5s ease;
+
+}
+
+
+#card{
+    flex: 0 0 270px;
+    width: 270px;
+    height: 350px;
+    background-color: grey;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-btn {
+    position: absolute;
+    top: 78%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    width: 40px;
+    height: 40px;
+    padding-top: 5px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 2px 8px #0003;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.prev {
+    left: 29%;
+}
+
+.next {
+    right: 7.5%;
+}
+
+#card-img{
+    width: 100%;
+    height: 100%;
+}
+
+#card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#card_location{
+    position: absolute;
+    top: 12px;
+    left: 10px;
+
+}
+#card_location a{
+    text-decoration: none;
+    color: white;
+    background-color: #f4f4f465;
+    backdrop-filter: blur(1.2px);
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid #ffffff61;
+    box-shadow: 0 0 10px 15px rgba(0 0 0 0.12);
+}
+#card_location:hover{
+    transform: scale(1.09);
+    transition: 0.2s;    
+}
+
+#mini_info{
+    background-color: rgba(229, 227, 227, 0.104);   
+    position: relative;
+    align-items: center;
+    display: block;
+    bottom: 140px;
+    border-radius: 20px;
+    width: 90%;
+    margin: 0 auto;
+    height: 130px;
+    backdrop-filter: blur(3px);
+    border: 1px solid #ffffff2f;
+}
+#mini_info #place-name,
+#mini_info #rating,
+#mini_info #seeMore a{
+    position: relative;
+    top: 10px;
+    color: #ffff;
+    text-decoration: none;
+    line-height: 30px;
+}
+#mini_info #seeMore a{
+    position: relative;
+    margin: 5px auto ;
+    background-color: #f4f4f436;
+    padding: 9px;
+    width: 95%;
+    border-radius: 20px;
+    display: block;
+}
+
+
+#mini_info #seeMore a:hover{
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+
+#mini_info #rating,
+#mini_info #rating i{
+    color: #e8a600;
+}
+/* .swiper{
+    overflow: hidden;
+    height: 350px;
+    width: 100%;
+    display: flex;
+} */
 
 
 #mini_card_switch,
@@ -178,6 +320,7 @@ option::checkmark{
 #mini_card_switch{
     height: 230px;
     padding: 0 40px;
+    
 }
 #mini_card_switch p{
     padding: 25px;
@@ -236,10 +379,8 @@ option::checkmark{
 #mini_card2{
     width: 32%;
     height: 350px;
-    /* background-color: rgb(110, 109, 109); */
     border-radius: 50px;
     position: relative;
-    
 }
 
 #more_info,
@@ -390,6 +531,11 @@ option::checkmark{
     font-size: 20pt;
     
 }
+
+
+
+
+
 
 
 /* =================================
