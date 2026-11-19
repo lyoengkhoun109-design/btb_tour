@@ -1115,3 +1115,20 @@ a {
         padding: 30px 15px;
     }
 }
+span.map-icon {
+    font-size: 50px;
+}
+.map-button input[type="button"] {
+    background-color: #a0cd5d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+   
+}
+.map-button input[type="button"]:hover {
+    background-color: #417136;
+}
