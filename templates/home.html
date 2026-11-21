@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,11 +8,12 @@
 
     <title>BTB TOUR - Home</title>
 
-    <link rel="stylesheet" href="/css/home_style.css">
+    <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
     <link rel="stylesheet" href="/css/navbar_style.css">
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+
+    
 
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
@@ -24,10 +26,12 @@
 <body>
 
     <!-- NAVBAR -->
-    <div id="nav-container"></div>
-    <script src="/javascript/nav.js"></script>
+    {% include "components/navbar.html" %}
 
     <!-- MAIN CONTENT -->
+
+    <main>
+    {% block content %}
     <div class="main-content">
 
         <div id="banner">
@@ -133,9 +137,9 @@
 
         <!-- POPULAR PLACE CARD -->
         <div class="cardContainer">
-            <button class="slide-btn prev" id="prevBtn">
+            {% comment %} <button class="slide-btn prev" id="prevBtn">
                 <i class="bxf bx-chevron-left"></i>
-            </button>
+            </button> {% endcomment %}
 
             <div class="card-window">
                 <div id="main_card">
@@ -283,19 +287,25 @@
 
                 </div>
             </div>
-            <button class="slide-btn next" id="nextBtn">
+            {% comment %} <button class="slide-btn next" id="nextBtn">
                 <i class="bxf bx-chevron-right"></i>
-            </button>
+            </button> {% endcomment %}
 
         </div>
-    </div>
+    </div>        
+    {% endblock content %}
+    </main>
+        
 
 
+{% comment %} footer {% endcomment %}
+
+    {% include "components/footer.html" %}
     <!-- JAVASCRIPT: LOAD ONLY ONCE -->
-    <script src="/javascript/translations.js"></script>
+    {% comment %} <script src="/javascript/translations.js"></script>
     <script src="/javascript/language.js"></script>
 
-    <script src="/javascript/home_event.js"></script>
+    <script src="/javascript/home_event.js"></script> {% endcomment %}
 
 </body>
 
