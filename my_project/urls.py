@@ -21,4 +21,13 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
+    path('place/', views.place),
+    path('hotel/', views.hotel),
+    path('food/', views.food),
+    path('service/', views.service),
+    path('battambang/', views.battambang),
+    path('emergency/', views.emergency),
+    path('language/', views.language),
+    path('login/', views.login),
+
 ]

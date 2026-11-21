@@ -1,3 +1,5 @@
+{% extends 'home.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="/css/navbar_style.css">
-    <link rel="stylesheet" href="/css/emergen_style.css">
+    {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'css/emergen_style.css' %}">
+    {% endblock extra_css %}
 
     <!-- Basic Icons -->
     <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
@@ -17,10 +20,11 @@
 </head>
 <body>
 
-    <div id="nav-container"></div>
-    <script src="/javascript/nav.js"></script>
 
-    <div class="container">
+    <main>
+        
+        {% block content %}
+        <div class="container">
         <div id="card">
             <h1>POLICE</h1>
             <h3>Contect : </h3>
@@ -37,6 +41,10 @@
             <button class="firetruck" id="btnCall" type="button"><i class="bxf bx-phone" ></i></button>
         </div>
 
-    </div>
+    </div>        
+        {% endblock content %}
+            
+    </main>
+
 </body>
 </html>

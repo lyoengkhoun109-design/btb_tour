@@ -1,4 +1,5 @@
-
+{% extends 'home.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,19 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BTB Tour | Services</title>
 
-    <link rel="stylesheet" href="/css/navbar_style.css">
-    <link rel="stylesheet" href="/css/foodandhotelnavbar.css">
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/foodandhotelnavbar.css' %}">    
+{% endblock extra_css %}
+    
+
     <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <div id="nav-container"></div>
-    <script src="/javascript/nav.js"></script>
-
-    <!-- HERO -->
+    <main>
+        
+        {% block content %}
+<!-- HERO -->
     <section class="hero service-hero">
         <div class="hero-content">
             <span>TRAVEL WITH COMFORT</span>
@@ -216,6 +220,10 @@
         <p>© 2026 BTB Tour. All Rights Reserved.</p>
     </footer>
 
+        {% endblock content %}
+            
+    </main>
+    
     <!-- SEARCH AND FILTER -->
     <script>
         let currentCategory = "all";

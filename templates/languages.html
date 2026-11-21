@@ -1,4 +1,5 @@
-
+{% extends 'home.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,18 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>BTB TOUR - Languages</title>
-
-    <link rel="stylesheet" href="/css/navbar_style.css">
-    <link rel="stylesheet" href="/css/languages.css">
+    {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'css/languages.css' %}">    
+    {% endblock extra_css %}
 
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <div id="nav-container"></div>
 
-    <!-- LANGUAGE PAGE -->
+    <main>
+        
+        {% block content %}
+            <!-- LANGUAGE PAGE -->
     <section class="language-page">
 
         <h1 data-i18n="chooseLanguage">
@@ -79,11 +81,15 @@
         </a>
 
     </section>
+        {% endblock content %}
+            
+    </main>
+
+    
 
     <!-- JAVASCRIPT: LOAD ONLY ONCE -->
     <script src="/javascript/translations.js"></script>
     <script src="/javascript/language.js"></script>
-    <script src="/javascript/nav.js"></script>
 
 </body>
 </html>

@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>BTB TOUR - Home</title>
-
-    <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
-    <link rel="stylesheet" href="/css/navbar_style.css">
+    
+    {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'css/home_style.css' %}">        
+    {% endblock extra_css %}
 
     <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
 
@@ -26,7 +27,7 @@
 <body>
 
     <!-- NAVBAR -->
-    {% include "components/navbar.html" %}
+    {% include 'components/navbar.html' %}
 
     <!-- MAIN CONTENT -->
 
@@ -35,7 +36,7 @@
     <div class="main-content">
 
         <div id="banner">
-            <img src="/images/kamping-puoy.jpg" alt="Kamping Puoy">
+            <img src="{% static 'images/kamping-puoy.jpg' %}" alt="Kamping Puoy">
         </div>
 
         <form>
@@ -147,7 +148,7 @@
                     <div id="card">
 
                         <div id="card-img">
-                            <img src="/images/btb_round.jpg" alt="">
+                            <img src="{% static '/images/btb_round.jpg' %}" alt="">
                         </div>
                         <div id="card_location">
                             <a href="#">
@@ -167,7 +168,7 @@
                     <div id="card">
 
                         <div id="card-img">
-                            <img src="/images/btb_round.jpg" alt="">
+                            <img src="{% static '/images/btb_round.jpg' %}" alt="">
                         </div>
                         <div id="card_location">
                             <a href="#">
@@ -187,7 +188,7 @@
                     <div id="card">
 
                         <div id="card-img">
-                            <img src="/images/btb_round.jpg" alt="">
+                            <img src="{% static '/images/btb_round.jpg' %}" alt="">
                         </div>
                         <div id="card_location">
                             <a href="#">
@@ -207,7 +208,7 @@
                     <div id="card">
 
                         <div id="card-img">
-                            <img src="/images/btb_round.jpg" alt="">
+                            <img src="{% static '/images/btb_round.jpg' %}" alt="">
                         </div>
                         <div id="card_location">
                             <a href="#">
@@ -227,7 +228,7 @@
                     <div id="card">
 
                         <div id="card-img">
-                            <img src="/images/btb_round.jpg" alt="">
+                            <img src="{% static '/images/btb_round.jpg' %}" alt="">
                         </div>
                         <div id="card_location">
                             <a href="#">
@@ -247,7 +248,7 @@
                     <div id="card">
 
                         <div id="card-img">
-                            <img src="/images/btb_round.jpg" alt="">
+                            <img src="{% static '/images/btb_round.jpg' %}" alt="">
                         </div>
                         <div id="card_location">
                             <a href="#">
@@ -267,7 +268,7 @@
                     <div id="card">
 
                         <div id="card-img">
-                            <img src="/images/btb_round.jpg" alt="">
+                            <img src="{% static '/images/btb_round.jpg' %}" alt="">
                         </div>
                         <div id="card_location">
                             <a href="#">
@@ -300,12 +301,9 @@
 
 {% comment %} footer {% endcomment %}
 
-    {% include "components/footer.html" %}
+    {% include 'components/footer.html'%}
     <!-- JAVASCRIPT: LOAD ONLY ONCE -->
-    {% comment %} <script src="/javascript/translations.js"></script>
-    <script src="/javascript/language.js"></script>
 
-    <script src="/javascript/home_event.js"></script> {% endcomment %}
 
 </body>
 

@@ -1,3 +1,5 @@
+{% extends 'home.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="km">
 
@@ -6,8 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Cambodia</title>
 
-    <link rel="stylesheet" href="/css/afterhome.css">
-    <link rel="stylesheet" href="/css/navbar_style.css">
+    
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/afterhome.css' %}">   
+{% endblock extra_css %}
 
     <!-- Khmer font -->
     <link
@@ -19,10 +23,10 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <div id="nav-container"></div>
-    <script src="/javascript/nav.js"></script>    
+   
+   <main>
     
+    {% block content %}
     <div class="app">
 
         <!-- Search Header -->
@@ -173,7 +177,11 @@
             រកមិនឃើញទីតាំងទេ!
         </div>
 
-    </div>
+    </div>        
+    {% endblock content %}
+        
+   </main> 
+    
 
     <script src="script.js"></script>
 
