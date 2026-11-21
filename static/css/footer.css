@@ -1,0 +1,185 @@
+/* ===================================================
+   FOOTER STYLES (Multi-Column Layout)
+=================================================== */
+
+.site-footer {
+    background-color: #f8f9fa;
+    color: #555555;
+    font-family: 'Kantumruy Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    border-top: 1px solid #e9ecef;
+    margin-top: 60px;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    box-sizing: border-box;
+}
+
+.site-footer * {
+    box-sizing: border-box;
+}
+
+.site-footer a {
+    color: #666666;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease, padding-left 0.2s ease;
+}
+
+.site-footer a:hover {
+    color: #3157ce;
+}
+
+/* 1. Social Section */
+.footer-social-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    border-bottom: 1px solid #e9ecef;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-social-text {
+    font-weight: 500;
+    font-size: 15px;
+    color: #333333;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 14px;
+}
+
+.footer-social-icons a {
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    color: #495057;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.footer-social-icons a:hover {
+    background-color: #3157ce;
+    border-color: #3157ce;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* 2. Main Columns (4 Columns Grid) */
+.footer-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 24px 35px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+}
+
+.footer-col h6 {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #212529;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.5px;
+}
+
+.footer-col h6 i {
+    color: #3157ce;
+    font-size: 16px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-col p i {
+    color: #3157ce;
+    width: 18px;
+    text-align: center;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 11px;
+}
+
+.footer-col ul li a {
+    font-size: 14px;
+    color: #666666;
+    display: inline-block;
+}
+
+.footer-col ul li a:hover {
+    color: #3157ce;
+    padding-left: 4px;
+}
+
+/* 3. Copyright Section */
+.footer-copyright {
+    text-align: center;
+    padding: 22px;
+    background-color: #eeeeef;
+    font-size: 14px;
+    color: #6c757d;
+    border-top: 1px solid #e5e5e8;
+}
+
+.footer-copyright a {
+    font-weight: 600;
+    color: #212529;
+}
+
+.footer-copyright a:hover {
+    color: #3157ce;
+}
+
+/* 4. Responsive Breakpoints */
+@media (max-width: 992px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-social-section {
+        justify-content: center;
+        text-align: center;
+    }
+    .footer-social-text {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-main {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 25px;
+    }
+    .footer-col h6 {
+        justify-content: center;
+    }
+    .footer-col p {
+        justify-content: center;
+    }
+}

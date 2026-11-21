@@ -1,62 +1,36 @@
 {% extends 'home.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/battambangnavbar.css' %}">    
+{% endblock extra_css %}
 
-    <title>BTB Tour | Geography of Battambang</title>
+{% block content %}
 
-    {% block extra_css %}
-        <link rel="stylesheet" href="{% static 'css/battambangnavbar.css' %}">    
-    {% endblock extra_css %}
-
-    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-</head>
-
-<body>
-
-    <!-- NAVBAR -->
-    {% include "components/navbar.html" %}
-    <main>
-        
-        {% block content %}
-            
-    <div id="nav-container"></div>
-    <script src="/javascript/nav.js"></script>
-
-
-    <!-- BOOK HERO -->
-
-    <section class="geo-hero">
-
-        <div class="geo-hero-overlay"></div>
-
-        <div class="geo-hero-content">
-
-            <span>CHAPTER 02 • GEOGRAPHY</span>
-
-            <h1>Geography of Battambang</h1>
-
+    <!-- HERO HEADER -->
+    <section class="hero battambang-hero">
+        <div class="hero-content">
+            <span>KNOW OUR PROVINCE</span>
+            <h1>Explore Battambang</h1>
             <p>
                 Explore the location, landscapes, rivers,
                 mountains, districts and natural environment
                 of Battambang Province.
             </p>
-
-            <a href="#geo-intro" class="history-btn">
+            <a href="#geo-intro" class="history-btn" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 15px; padding: 12px 24px; background: #ffd36b; color: #202c3b; font-weight: 700; border-radius: 20px; text-decoration: none;">
                 Start Reading
                 <i class="fa-solid fa-book-open"></i>
             </a>
-
         </div>
+    </section>
 
+    <!-- SEARCH HEADER -->
+    <section class="search-section">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search in Battambang...">
+            <button onclick="searchPage()">Search</button>
+        </div>
     </section>
 
 
@@ -621,10 +595,23 @@
         <p>© 2026 BTB Tour. All Rights Reserved.</p>
 
     </footer> {% endcomment %}
-        {% endblock content %}
-    </main>        
-    
 
-</body>
-
-</html>
+    <script>
+        function searchPage() {
+            const query = document.getElementById("searchInput").value.toLowerCase().trim();
+            if (!query) return;
+            const headings = document.querySelectorAll(".geo-container h2, .geo-container h3, .geo-facts-card h4, .district-card h4");
+            for (let el of headings) {
+                if (el.textContent.toLowerCase().includes(query)) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    el.style.backgroundColor = 'rgba(255, 211, 107, 0.4)';
+                    setTimeout(() => el.style.backgroundColor = '', 2000);
+                    return;
+                }
+            }
+        }
+        document.getElementById("searchInput").addEventListener("keyup", function(e) {
+            if (e.key === "Enter") searchPage();
+        });
+    </script>
+{% endblock content %}
