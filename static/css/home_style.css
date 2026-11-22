@@ -15,20 +15,29 @@ body{
     position: relative;
     
 }
+#banner{
+    width: 95%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
 #banner img{
     display: block;
-    width: 78%;
-    height: 400px;
-    margin: 20px auto;
+    width: 100%;
+    height: 350px;
+
     border-radius: 30px;
     object-fit: cover;
+    overflow: hidden;
 }
 
 #s-info{
     width: 60%;
     background-color: rgba(246, 244, 241, 0.892);
     margin: 0 auto;
-    padding: 50px;
+    padding: 40px;
     position: absolute;
     transform: translate(-50%);
     bottom: -90px;
@@ -87,11 +96,17 @@ select {
     outline: none;
     background-color: transparent;
     cursor: pointer;
+    
 }
 
 select::picker-icon {
     color: black;
     transition: rotate 0.2s ease;
+    font-size: 1.2em;
+}
+
+select::picker-icon{
+    content: url('../assets/down_arrow.svg');
 }
 
 select:open::picker-icon {
