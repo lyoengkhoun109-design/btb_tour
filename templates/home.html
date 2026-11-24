@@ -14,7 +14,7 @@
 
     <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
 
-    
+     <link rel="stylesheet" href="{% static 'css/card.css' %}">
 
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
@@ -134,164 +134,16 @@
         </div>
 
         <!-- POPULAR PLACE CARD -->
-        <div class="cardContainer">
-            {% comment %} <button class="slide-btn prev" id="prevBtn">
-                <i class="bxf bx-chevron-left"></i>
-            </button> {% endcomment %}
+       <!-- HOTEL SECTION -->
+<div class="card-section">
+    <h2>Recommended Hotels</h2>
 
-            <div class="card-window">
-                <div id="main_card">
-
-                    <div id="card">
-
-                        <div id="card-img">
-                            <img src="{% static '/images/btb_round.jpg' %}" alt="">
-                        </div>
-                        <div id="card_location">
-                            <a href="#">
-                                <i class="bx bx-location-alt-2"></i>
-                                <span data-i18n="location">Location</span>
-                            </a>
-                        </div>
-                        <div id="mini_info">
-                            <p id="place-name">Place Name</p>
-                            <span id="rating"> <i class="bxf bx-star"></i> Rating</span>
-                            <div id="seeMore">
-                                <a href="#">See More</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div id="card">
-
-                        <div id="card-img">
-                            <img src="{% static '/images/btb_round.jpg' %}" alt="">
-                        </div>
-                        <div id="card_location">
-                            <a href="#">
-                                <i class="bx bx-location-alt-2"></i>
-                                <span data-i18n="location">Location</span>
-                            </a>
-                        </div>
-                        <div id="mini_info">
-                            <p id="place-name">Place Name</p>
-                            <span id="rating"> <i class="bxf bx-star"></i> Rating</span>
-                            <div id="seeMore">
-                                <a href="#">See More</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div id="card">
-
-                        <div id="card-img">
-                            <img src="{% static '/images/btb_round.jpg' %}" alt="">
-                        </div>
-                        <div id="card_location">
-                            <a href="#">
-                                <i class="bx bx-location-alt-2"></i>
-                                <span data-i18n="location">Location</span>
-                            </a>
-                        </div>
-                        <div id="mini_info">
-                            <p id="place-name">Place Name</p>
-                            <span id="rating"> <i class="bxf bx-star"></i> Rating</span>
-                            <div id="seeMore">
-                                <a href="#">See More</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div id="card">
-
-                        <div id="card-img">
-                            <img src="{% static '/images/btb_round.jpg' %}" alt="">
-                        </div>
-                        <div id="card_location">
-                            <a href="#">
-                                <i class="bx bx-location-alt-2"></i>
-                                <span data-i18n="location">Location</span>
-                            </a>
-                        </div>
-                        <div id="mini_info">
-                            <p id="place-name">Place Name</p>
-                            <span id="rating"> <i class="bxf bx-star"></i> Rating</span>
-                            <div id="seeMore">
-                                <a href="#">See More</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div id="card">
-
-                        <div id="card-img">
-                            <img src="{% static '/images/btb_round.jpg' %}" alt="">
-                        </div>
-                        <div id="card_location">
-                            <a href="#">
-                                <i class="bx bx-location-alt-2"></i>
-                                <span data-i18n="location">Location</span>
-                            </a>
-                        </div>
-                        <div id="mini_info">
-                            <p id="place-name">Place Name</p>
-                            <span id="rating"> <i class="bxf bx-star"></i> Rating</span>
-                            <div id="seeMore">
-                                <a href="#">See More</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div id="card">
-
-                        <div id="card-img">
-                            <img src="{% static '/images/btb_round.jpg' %}" alt="">
-                        </div>
-                        <div id="card_location">
-                            <a href="#">
-                                <i class="bx bx-location-alt-2"></i>
-                                <span data-i18n="location">Location</span>
-                            </a>
-                        </div>
-                        <div id="mini_info">
-                            <p id="place-name">Place Name</p>
-                            <span id="rating"> <i class="bxf bx-star"></i> Rating</span>
-                            <div id="seeMore">
-                                <a href="#">See More</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div id="card">
-
-                        <div id="card-img">
-                            <img src="{% static '/images/btb_round.jpg' %}" alt="">
-                        </div>
-                        <div id="card_location">
-                            <a href="#">
-                                <i class="bx bx-location-alt-2"></i>
-                                <span data-i18n="location">Location</span>
-                            </a>
-                        </div>
-                        <div id="mini_info">
-                            <p id="place-name">Place Name</p>
-                            <span id="rating"> <i class="bxf bx-star"></i> Rating</span>
-                            <div id="seeMore">
-                                <a href="#">See More</a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            {% comment %} <button class="slide-btn next" id="nextBtn">
-                <i class="bxf bx-chevron-right"></i>
-            </button> {% endcomment %}
-
-        </div>
-    </div>    
-   
+    <div class="card-grid">
+        {% for caed in card %}
+            {% include "components/card.html" with card=card %}
+        {% endfor %}
+    </div>
+</div>
     {% endblock content %}
     </main>
         

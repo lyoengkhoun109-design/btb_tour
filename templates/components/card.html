@@ -1,0 +1,38 @@
+{% load static %}
+<article class="tour-card">
+
+    <div class="card-image">
+        <img src="{{ hotel.image }}" alt="{{ hotel.name }}">
+        <span class="card-tag">{{ hotel.category }}</span>
+    </div>
+
+    <div class="card-content">
+
+        <h3>{{ hotel.name }}</h3>
+
+        <p class="description">
+            A hotel option offering comfortable rooms and facilities for travelers.
+        </p>
+
+        <div class="card-info">
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                {{ hotel.location }}
+            </span>
+        </div>
+
+        <div class="card-bottom">
+            <span class="price">Price: Check hotel</span>
+            <span class="rating">
+                <i class="fa-solid fa-bed"></i> Hotel
+            </span>
+        </div>
+
+        <details class="more-details">
+            <summary>See More</summary>
+            <p>Contact the property to confirm prices and availability.</p>
+        </details>
+
+    </div>
+
+</article>
