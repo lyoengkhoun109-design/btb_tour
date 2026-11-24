@@ -335,7 +335,7 @@ option::checkmark{
 #mini_card_switch{
     height: 230px;
     padding: 0 40px;
-    
+    overflow: hidden;
 }
 #mini_card_switch p{
     padding: 25px;
@@ -353,8 +353,7 @@ option::checkmark{
     /* border-top: 1px solid rgb(203, 203, 203); */ 
     padding: 10px;
     cursor: pointer;
-    margin-bottom: 10px;
-    position: relative;
+    margin: 0 auto;
 }
 #all_region ul li:hover{
     background-color: #d4d4d451;
