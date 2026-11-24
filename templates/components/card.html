@@ -1,30 +1,39 @@
 {% load static %}
-<article class="tour-card">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/card.css' %}">
+</head>
+<body>
+    <article class="tour-card">
 
     <div class="card-image">
-        <img src="{{ hotel.image }}" alt="{{ hotel.name }}">
-        <span class="card-tag">{{ hotel.category }}</span>
+        <img src="{{card.image }}" alt="{{card.name }}">
+        <span class="card-tag">{{card.category }}</span>
     </div>
 
     <div class="card-content">
 
-        <h3>{{ hotel.name }}</h3>
+        <h3>{{card.name }}</h3>
 
         <p class="description">
-            A hotel option offering comfortable rooms and facilities for travelers.
+            Acard option offering comfortable rooms and facilities for travelers.
         </p>
 
         <div class="card-info">
             <span>
                 <i class="fa-solid fa-location-dot"></i>
-                {{ hotel.location }}
+                {{card.location }}
             </span>
         </div>
 
         <div class="card-bottom">
-            <span class="price">Price: Check hotel</span>
+            <span class="price">Price: Checkcard</span>
             <span class="rating">
-                <i class="fa-solid fa-bed"></i> Hotel
+                <i class="fa-solid fa-bed"></i>card
             </span>
         </div>
 
@@ -36,3 +45,5 @@
     </div>
 
 </article>
+</body>
+</html>

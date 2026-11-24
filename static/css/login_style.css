@@ -10,7 +10,7 @@ body{
     align-items: center;
     justify-content: center;
     display: flex;
-    background: url(/images/btb_round.jpg);
+    background: url(../images/login_bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
