@@ -1,49 +1,40 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/card.css' %}">
-</head>
-<body>
-    <article class="tour-card">
+<article class="tour-card">
 
     <div class="card-image">
-        <img src="{{card.image }}" alt="{{card.name }}">
-        <span class="card-tag">{{card.category }}</span>
+        <img src="{{ card.image }}" alt="{{ card.name }}">
+        <span class="card-tag">{{ card.category }}</span>
     </div>
 
     <div class="card-content">
 
-        <h3>{{card.name }}</h3>
+        <h3>{{ card.name }}</h3>
 
         <p class="description">
-            Acard option offering comfortable rooms and facilities for travelers.
+            A comfortable hotel option offering rooms and facilities for travelers.
         </p>
 
         <div class="card-info">
             <span>
                 <i class="fa-solid fa-location-dot"></i>
-                {{card.location }}
+                {{ card.location }}
             </span>
         </div>
 
         <div class="card-bottom">
-            <span class="price">Price: Checkcard</span>
+            <span class="price">Price: Check availability</span>
             <span class="rating">
-                <i class="fa-solid fa-bed"></i>card
+                <i class="fa-solid fa-bed"></i>
             </span>
         </div>
 
         <details class="more-details">
-            <summary>See More</summary>
+            <summary>
+                <span>See More</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </summary>
             <p>Contact the property to confirm prices and availability.</p>
         </details>
 
     </div>
 
 </article>
-</body>
-</html>

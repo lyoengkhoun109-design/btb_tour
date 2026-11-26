@@ -1,51 +1,243 @@
-/* Hotel Cards Container */
+.card-section {
+    width: 90%;
+    max-width: 1250px;
+    margin: 40px auto;
+}
+
+.place_container .card-section {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    margin: 0;
+}
+
+.card-section-header {
+    margin-bottom: 18px;
+}
+
+.card-section-header .section-eyebrow {
+    display: inline-block;
+    color: #3157ce;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.card-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #20272b;
+    margin: 0;
+    line-height: 1.3;
+}
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 25px;
-    padding: 20px;
+    gap: 24px;
+    padding: 12px 0 20px;
 }
 
-/* Each Hotel Card */
-.card-grid .card-card {
-    background: white;
-    border-radius: 15px;
+.place_container .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.tour-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(32, 39, 43, 0.06);
+    box-shadow: 0 6px 22px rgba(17, 24, 39, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 0;
 }
 
-/* Hotel Image */
-.card-grid .card-image img {
+.tour-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(49, 87, 206, 0.14);
+}
+
+.tour-card .card-image {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    height: 215px;
+    position: relative;
+    overflow: hidden;
+    background: #eef1f6;
 }
 
-/* Card Content */
-.crad-grid .card-content {
+.tour-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.tour-card:hover .card-image img {
+    transform: scale(1.07);
+}
+
+.tour-card .card-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: #ffd36b;
+    color: #1f242d;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tour-card .card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     padding: 20px;
 }
 
-/* Hotel Name */
-.crad-grid .card-content h3 {
-    margin-bottom: 10px;
+.tour-card .card-content h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #20272b;
 }
 
-/* Description */
-.crad-grid .description {
-    color: gray;
+.tour-card .description {
+    font-size: 14px;
+    color: #667085;
+    line-height: 1.65;
+    margin: 0 0 14px;
+    min-height: 46px;
 }
 
-/* Tablet */
+.tour-card .card-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 12px;
+    margin: auto 0 14px;
+    color: #5b6472;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.tour-card .card-info i {
+    color: #3157ce;
+    margin-right: 5px;
+}
+
+.tour-card .card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding-top: 14px;
+    margin: 0 0 14px;
+    border-top: 1px solid #eef0f4;
+}
+
+.tour-card .price {
+    font-size: 13px;
+    font-weight: 700;
+    color: #3157ce;
+}
+
+.tour-card .rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #e8a600;
+    white-space: nowrap;
+}
+
+.tour-card details.more-details {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f3f5ff;
+    color: #3157ce;
+    border: 1px solid rgba(49, 87, 206, 0.14);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tour-card details.more-details:hover {
+    background: #f3f5ff;
+    color: #3157ce;
+    transform: none;
+    border-color: rgba(49, 87, 206, 0.35);
+    box-shadow: 0 6px 16px rgba(49, 87, 206, 0.14);
+}
+
+.tour-card details.more-details summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #3157ce;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.tour-card details.more-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.tour-card details.more-details summary i {
+    transition: transform 0.25s ease;
+}
+
+.tour-card details.more-details summary:hover,
+.tour-card details.more-details[open] summary {
+    background: #3157ce;
+    color: #ffffff;
+}
+
+.tour-card details.more-details[open] summary i {
+    transform: rotate(90deg);
+}
+
+.tour-card details.more-details p {
+    margin: 0;
+    padding: 12px 15px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #475467;
+    background: #f8f9ff;
+    border-top: 1px solid rgba(49, 87, 206, 0.12);
+}
+
 @media (max-width: 900px) {
     .card-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
-    .card-grid {
+    .card-grid,
+    .place_container .card-grid {
         grid-template-columns: 1fr;
+    }
+
+    .card-section h2 {
+        font-size: 23px;
     }
 }

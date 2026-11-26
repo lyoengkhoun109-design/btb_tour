@@ -1,40 +1,29 @@
 {% load static %}
+<link rel="stylesheet" href="{% static 'css/navbar_style.css' %}">
+<!-- Basic Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+<!-- Filled Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+<!-- Brand Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/navbar_style.css' %}">
+<nav class="navbar">
+    <a href="/" class="logo">BTB TOUR</a>
 
-    <!-- Basic Icons -->
-    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
-    <!-- Filled Icons -->
-    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
-    <!-- Brand Icons -->
-    <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
-</head>
-<body>
-    <nav class="navbar">
-        <a href="/" class="logo">BTB TOUR</a>
+    <div class="nav-links">
+        <a nav-list="home" href="/">Home</a>
+        <a nav-list="place" href="/place">Place</a>
+        <a nav-list="hotel" href="/hotel">Hotels</a>
+        <a nav-list="food" href="/food">Food</a>
+        <a nav-list="service" href="/service">Service</a>
+        <a nav-list="battambang" href="/battambang">Battambang</a>
+    </div>
 
-        <div class="nav-links">
-            <a nav-list="home" href="/">Home</a>
-            <a nav-list="place" href="/place">Place</a>
-            <a nav-list="hotel" href="/hotel">Hotels</a>
-            <a nav-list="food" href="/food">Food</a>
-            <a nav-list="service" href="/service">Service</a>
-            <a nav-list="battambang" href="/battambang">Battambang</a>
-        </div>
+    <div class="nav-right">
+        <a nav-list="language" id="lang_bar" href="/language"><i class="bxf bx-translate"></i> Languages</a>
+        <a nav-list="emergency" href="/emergency"><i class="bxf bx-siren"></i> Emergency</a>
+        <a nav-list="logout" id="logoutBtn" href="/login">Logout <i class="bxf bx-arrow-out-right-square-half"></i></a>
+    </div>
+</nav>
 
-        <div class="nav-right">
-            <a nav-list="language" id="lang_bar" href="/language"><i class="bxf bx-translate"></i> Languages</a>
-            <a nav-list="emergency" href="/emergency"><i class="bxf bx-siren"></i> Emergency</a>
-            <a nav-list="logout" id="logoutBtn" href="/login">Logout <i class="bxf bx-arrow-out-right-square-half"></i></a>
-        </div>
-    </nav>
-
-    <script src="{% static 'javascript/nav.js' %}"></script>
-</body>
-</html>
+<script src="{% static 'javascript/nav.js' %}"></script>
