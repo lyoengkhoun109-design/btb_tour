@@ -594,7 +594,7 @@ body {
 @media screen and (max-width: 380px) {
 
     .sub-card-image {
-        height: 190px;
+        height: 160px;
     }
 
     .hero-title {
@@ -609,4 +609,8 @@ body {
         font-size: 13px;
     }
 
+}
+img{
+    width: 100px;
+    height: 100px;
 }
