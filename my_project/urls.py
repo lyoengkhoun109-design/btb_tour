@@ -22,6 +22,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
     path('place/', views.place),
+     # Place Detail Page
+    path('place/detail/', views.place_detail, name='place_detail'),
+    
+
     path('hotel/', views.hotel),
     path('food/', views.food),
     path('service/', views.service),

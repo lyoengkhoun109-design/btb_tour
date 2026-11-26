@@ -53,3 +53,9 @@ def language(request):
 
 def login(request):
     return render(request, 'login.html')
+
+def place_detail(request):
+    return render(
+        request,
+        'place.html/mountain.html/1.sompovmountain.html'
+    )
