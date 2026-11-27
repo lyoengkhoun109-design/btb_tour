@@ -26,8 +26,8 @@ urlpatterns = [
     path('place/detail/', views.place_detail, name='place_detail'),
     
 
-    path('my_app/', include('my_app.urls')),
-    path('my_app/', include('my_app.urls')),
+    path('hotel/', views.hotel),
+    path('food/', views.food),
     path('service/', views.service),
     path('battambang/', views.battambang),
     path('emergency/', views.emergency),

@@ -1,12 +1,9 @@
 from django.shortcuts import render
+from .models import card_place
 
 # Create your views here.
 
-def hotel(request):
-    return render(request, 'hotelnavbar.html' )
-
 def place(request):
-    return render(request, 'placenavbar.html' )
-
-def food(request):
-    return render(request, 'foodnavbar.html' )
+    card_places=card_place.objects.all()
+    context = {'card_places' : card_places}
+    return render(request, 'placenavbar.html', context)
