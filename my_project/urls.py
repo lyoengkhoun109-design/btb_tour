@@ -34,4 +34,6 @@ urlpatterns = [
     path('language/', views.language),
     path('login/', views.login),
 
+    path('my_app/', include('my_app.urls')),
+
 ]
