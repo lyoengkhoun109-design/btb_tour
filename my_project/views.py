@@ -30,14 +30,14 @@ def home(request):
         ]
     return render(request, 'home.html', {'cards': cards})
 
-def place(request):
-    return render(request, 'placenavbar.html')
+# def place(request):
+#     return render(request, 'placenavbar.html')
 
-def hotel(request):
-    return render(request, 'hotelnavbar.html')
+# def hotel(request):
+#     return render(request, 'hotelnavbar.html')
 
-def food(request):
-    return render(request, 'foodnavbar.html')
+# def food(request):
+#     return render(request, 'foodnavbar.html')
 
 def service(request):
     return render(request, 'servicenavbar.html')
