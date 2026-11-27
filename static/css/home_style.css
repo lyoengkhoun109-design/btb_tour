@@ -103,14 +103,19 @@ select::picker-icon {
     color: black;
     transition: rotate 0.2s ease;
     font-size: 1.2em;
+    transform-origin: center center;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 select::picker-icon{
     content: url('../assets/down_arrow.svg');
+    
 }
 
 select:open::picker-icon {
     rotate: 180deg;
+    
 }
 
 select::picker(select) {

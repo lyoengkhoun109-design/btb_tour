@@ -1,0 +1,35 @@
+{% extends 'placenavbar.html' %}
+
+
+{% block card_content %}
+
+{% for place in places %}
+
+<article class="tour-card" data-category="natural popular">
+    <div class="card-image">
+        {% comment %} <img src="{{place.image}}" alt="Phnom Sampeau"> {% endcomment %}
+        <span class="card-tag">{{place.destination}}</span>
+    </div>
+    <div class="card-content">
+        <h3>{{place.name}}</h3>
+        <p class="description">{{place.descriptions}}</p>
+        <div class="card-info">
+            <span><i class="fa-solid fa-location-dot"></i>{{place.location}}</span>
+            <span><i class="fa-solid fa-mountain"></i> {{place.kind}}</span>
+        </div>
+        <div class="card-bottom">
+            <span class="price">Tourist Attraction</span>
+            <span class="rating"><i class="fa-solid fa-star"></i> {{place.rate}}</span>
+        </div>
+
+        <a class="more-details" href="{% url 'place_detail' %}">
+
+            <summary>
+                See More
+                <i class="fa-solid fa-arrow-right"></i>
+            </summary>
+        </a>
+    </div>
+</article>
+{% endfor %}
+{% endblock card_content %}

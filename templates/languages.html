@@ -1,21 +1,11 @@
 {% extends 'home.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>BTB TOUR - Languages</title>
     {% block extra_css %}
-        <link rel="stylesheet" href="{% static 'css/languages.css' %}">    
+        <link rel="stylesheet" href="{% static 'css/languages.css' %}">
+        <script src="/javascript/translations.js"></script>
+        <script src="/javascript/language.js"></script>    
     {% endblock extra_css %}
-
-</head>
-
-<body>
-
 
     <main>
         
@@ -84,12 +74,3 @@
         {% endblock content %}
             
     </main>
-
-    
-
-    <!-- JAVASCRIPT: LOAD ONLY ONCE -->
-    <script src="/javascript/translations.js"></script>
-    <script src="/javascript/language.js"></script>
-
-</body>
-</html>
