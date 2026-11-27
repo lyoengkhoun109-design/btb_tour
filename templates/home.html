@@ -7,27 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>BTB TOUR - Home</title>
-    
+
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&display=swap" >
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
     {% block extra_css %}
-        <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
-    {% endblock extra_css %}
+    <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
     <link rel="stylesheet" href="{% static 'css/card.css' %}">
+    {% endblock extra_css %}
+
 
 
 </head>
 
 <body>
-     
+
 
     <!-- NAVBAR -->
     <div id="nav-container">
@@ -38,100 +43,140 @@
     <!-- MAIN CONTENT -->
 
     <main>
-    {% block content %}
-    <div class="main-content">
+        {% block content %}
+        <div class="main-content">
 
-        <div id="banner">
-            {% include "components/banner.html" %}
+            <div id="banner">
+                {% include "components/banner.html" %}
+            </div>
+
+            <form>
+                <div id="s-info">
+
+                    <div id="select-container">
+
+                        <select name="select_location" id="location">
+                            <option value="" selected disabled data-i18n="locations">Locations</option>
+                            <option value="">a</option>
+                            <option value="">c</option>
+                            <option value="">x</option>
+                            <option value="">c</option>
+                            <option value="">r</option>
+                            <option value="">i</option>
+                            <option value="">o</option>
+                            <option value="">u</option>
+                            <option value="">6</option>
+                            <option value="">k</option>
+                            <option value="">l</option>
+                        </select>
+
+                        <select name="select_day" id="Num_day">
+                            <option value="" selected disabled data-i18n="day">Day</option>
+                        </select>
+
+                        <select name="select_guest" id="guest">
+                            <option value="" selected disabled data-i18n="guest">Guest</option>
+                        </select>
+
+                        <div id="search">
+                            <button id="search-btn">
+                                <span class="material-symbols-outlined">search</span>
+                                <span data-i18n="search">Search</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+
         </div>
 
-        <form>
-            <div id="s-info">
+        <!-- PLACE CONTAINER -->
+        <div class="place_container">
 
-                <div id="select-container">
+            <div class="sec_card">
 
-                    <select name="select_location" id="location">
-                        <option value="" selected disabled data-i18n="locations">Locations</option>
-                        <option value="">a</option>
-                        <option value="">c</option>
-                        <option value="">x</option>
-                        <option value="">c</option>
-                        <option value="">r</option>
-                        <option value="">i</option>
-                        <option value="">o</option>
-                        <option value="">u</option>
-                        <option value="">6</option>
-                        <option value="">k</option>
-                        <option value="">l</option>
-                    </select>
+                <div id="mini_card_switch">
 
-                    <select name="select_day" id="Num_day">
-                        <option value="" selected disabled data-i18n="day">Day</option>
-                    </select>
+                    <p data-i18n="regions">Regions</p>
 
-                    <select name="select_guest" id="guest">
-                        <option value="" selected disabled data-i18n="guest">Guest</option>
-                    </select>
+                    <div id="all_region">
+                        <ul>
+                            <li>Natural</li>
+                            <li>Traditional</li>
+                            <li>Popular</li>
+                        </ul>
+                    </div>
+                </div>
 
-                    <div id="search">
-                        <button id="search-btn">
-                            <span class="material-symbols-outlined">search</span>
-                            <span data-i18n="search">Search</span>
-                        </button>
+                <div id="mini_card_more">
+
+                    <div id="detail_info">
+                        <span data-i18n="moreDetails">More Details</span>
+                        <i class="bx bx-chevron-right"></i>
                     </div>
 
                 </div>
-            </div>
-        </form>
 
-    </div>
-
-    <!-- PLACE CONTAINER -->
-    <div class="place_container">
-
-        <div class="sec_card">
-
-            <div id="mini_card_switch">
-
-                <p data-i18n="regions">Regions</p>
-
-                <div id="all_region">
-                    <ul>
-                        <li>Natural</li>
-                        <li>Traditional</li>
-                        <li>Popular</li>
-                    </ul>
-                </div>
             </div>
 
-            <div id="mini_card_more">
-
-                <div id="detail_info">
-                    <span data-i18n="moreDetails">More Details</span>
-                    <i class="bx bx-chevron-right"></i>
+            <!-- POPULAR PLACE CARD -->
+            <!-- HOTEL SECTION -->
+            <section class="card-section">
+                <div class="card-section-header">
+                    <h2>Recommended</h2>
                 </div>
 
-            </div>
+                <div class="card-grid">
+                    {% for card in cards %}
 
-        </div>
+                    <article class="tour-card">
 
-        <!-- POPULAR PLACE CARD -->
-        <!-- HOTEL SECTION -->
-        <section class="card-section">
-            <div class="card-section-header">
-                <h2>Recommended</h2>
-            </div>
+                        <div class="card-image">
+                            <img src="{{ card.image }}" alt="{{ card.name }}">
+                            <span class="card-tag">{{ card.category }}</span>
+                        </div>
 
-            <div class="card-grid">
-                {% for card in cards %}
-                    {% include "components/card.html" with card=card %}
-                {% endfor %}
-            </div>
-        </section>
-    {% endblock content %}
+                        <div class="card-content">
+
+                            <h3>{{ card.name }}</h3>
+
+                            <p class="description">
+                                A comfortable hotel option offering rooms and facilities for travelers.
+                            </p>
+
+                            <div class="card-info">
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    {{ card.location }}
+                                </span>
+                            </div>
+
+                            <div class="card-bottom">
+                                <span class="price">Price: Check availability</span>
+                                <span class="rating">
+                                    <i class="fa-solid fa-bed"></i>
+                                </span>
+                            </div>
+
+                            <details class="more-details">
+                                <summary>
+                                    <span>See More</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </summary>
+                                <p>Contact the property to confirm prices and availability.</p>
+                            </details>
+
+                        </div>
+
+                    </article>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endblock content %}
     </main>
-        
-{% comment %} footer {% endcomment %}
+
+    {% comment %} footer {% endcomment %}
 
     {% include 'components/footer.html'%}
     <!-- JAVASCRIPT: LOAD ONLY ONCE -->
