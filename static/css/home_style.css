@@ -81,23 +81,69 @@ body{
     margin-right: 30px;
 }
 
+select,
+select::picker(select) {
+    appearance: base-select;
+    
+}
+
 select {
-    appearance: none;
-    -webkit-appearance: none;
     width: 200px;
-    padding: 12px 36px 12px 12px;
+    padding: 12px;
     font-size: 14pt;
     text-align: center;
     border: none;
     outline: none;
     background-color: transparent;
-    background-image: url('../assets/down_arrow.svg');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 20px 20px;
     cursor: pointer;
+    
 }
 
+select::picker-icon {
+    color: black;
+    transition: rotate 0.2s ease;
+    font-size: 1.2em;
+}
+
+select::picker-icon{
+    content: url('../assets/down_arrow.svg');
+}
+
+select:open::picker-icon {
+    rotate: 180deg;
+}
+
+select::picker(select) {
+    position-area: block-end;
+    background: #fffffff9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #0002;
+    position-try-fallbacks: none;
+    position-try-order: none;
+    
+}
+
+option {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+::picker(select){
+    width: 300px;
+    height: 200px;
+}
+
+option:hover{
+    background-color: #ebe8e8;
+}
+
+option::checkmark{
+    order: 1;
+    margin-inline-start: auto;
+    content: "";
+}
 /* place card */
 
 .place_container {
