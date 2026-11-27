@@ -24,7 +24,8 @@ urlpatterns = [
     path('my_app/', include('my_app.urls')),
      # Place Detail Page
     path('place/detail/', views.place_detail, name='place_detail'),
-    
+    #food Detail page
+    path('food/detail/',views.food_detail,name='food_detail'),
 
     path('hotel/', views.hotel),
     path('food/', views.food),

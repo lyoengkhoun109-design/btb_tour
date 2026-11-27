@@ -59,3 +59,5 @@ def place_detail(request):
         request,
         'place.html/mountain.html/1.sompovmountain.html'
     )
+def food_detail(request):
+  return render(request, 'foodnavbar.html')

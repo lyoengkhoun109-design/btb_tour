@@ -1,0 +1,107 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/foodandhotelnavbar.css' %}">        
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+{% endblock extra_css %}
+
+{% block content %}
+    <!-- HERO -->
+    <section class="hero food-hero">
+        <div class="hero-content">
+            <span>DISCOVER KHMER CUISINE</span>
+            <h1>Explore Cambodian Food</h1>
+            <p>Discover delicious traditional food and local tastes in Battambang.</p>
+        </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="search-section">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search food...">
+            <button onclick="searchCards()">Search</button>
+        </div>
+    </section>
+
+    <!-- FOOD SECTION -->
+    <div class="main-container">
+        <div class="section-heading">
+            <div>
+                <span class="small-title">TASTE OF CAMBODIA</span>
+                <h2>Popular Khmer Food</h2>
+                <p>Enjoy traditional Cambodian dishes and local specialties.</p>
+            </div>
+        </div>
+
+        <!-- FILTER -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterCards('all', this)">All Food</button>
+            <button class="filter-btn" onclick="filterCards('noodle', this)">Noodles</button>
+            <button class="filter-btn" onclick="filterCards('rice', this)">Rice</button>
+            <button class="filter-btn" onclick="filterCards('traditional', this)">Traditional</button>
+            <button class="filter-btn" onclick="filterCards('dessert', this)">Dessert</button>
+        </div>
+
+        <!-- FOOD CARDS (បន្ថែម class="tour-card" និង data-category) -->
+        <div class="card tour-card" data-category="traditional" style="width: 18rem;">
+            <!-- ដាក់ Link រូបភាពពិតប្រាកដដែលមានកន្ទុយ .jpg ឬ .png -->
+            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Khmer Food">
+            <div class="card-body">
+                <h4 class="card-title">Fish Amok</h4>
+                <p class="card-text">Traditional Cambodian steamed curry fish.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Battambang</li>
+                <li class="list-group-item">Price: $4.00</li>
+            </ul>
+            <div class="card-body flex-row gap-4">
+                <a href="#">View Details</a>
+            </div>
+        </div>
+
+        <p class="no-results" id="noResults" style="display: none;">No food found. Please try another search.</p>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        let currentCategory = "all";
+
+        function filterCards(category, button) {
+            currentCategory = category;
+            document.querySelectorAll(".filter-btn").forEach(btn => {
+                btn.classList.remove("active");
+            });
+            button.classList.add("active");
+            searchCards();
+        }
+
+        function searchCards() {
+            const searchValue = document.getElementById("searchInput").value.toLowerCase();
+            const cards = document.querySelectorAll(".tour-card");
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                const category = card.dataset.category;
+
+                const matchesSearch = text.includes(searchValue);
+                const matchesCategory = currentCategory === "all" || category === currentCategory;
+
+                if (matchesSearch && matchesCategory) {
+                    card.style.display = "block";
+                    visibleCount++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            document.getElementById("noResults").style.display =
+                visibleCount === 0 ? "block" : "none";
+        }
+
+        document.getElementById("searchInput").addEventListener("input", searchCards);
+    </script>
+{% endblock content %}
