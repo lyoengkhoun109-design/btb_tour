@@ -42,12 +42,14 @@
 
             <!-- FILTER -->
             <div class="filter-buttons">
-                {% comment %} <button class="filter-btn active" onclick="filterCards('all', this)">All Places</button>
+                {% comment %} 
                 <button class="filter-btn" onclick="filterCards('natural', this)">Natural</button>
                 <button class="filter-btn" onclick="filterCards('traditional', this)">Traditional</button>
                 <button class="filter-btn" onclick="filterCards('popular', this)">Popular</button> {% endcomment %}
-
-                {% include "placeCategory.html"%}
+                <button class="filter-btn active" onclick="filterCards('all', this)">All Places</button>
+                {% for categoryPlace in categoryPlaces %}
+                    <button class="filter-btn" onclick="filterCards('{{categoryPlace.category_type}}', this)">{{categoryPlace.category_type}}</button>
+                {% endfor %}                       
             </div>
 
             <!-- PLACE CARDS -->
@@ -56,7 +58,7 @@
 
                     <article class="tour-card" data-category="natural popular">
                         <div class="card-image">
-                            {% comment %} <img src="{{place.image}}" alt="Phnom Sampeau"> {% endcomment %}
+                            <img src="{{card_place.image.urls}}" alt="{{card_place.name}}">
                             <span class="card-tag">{{card_place.destination}}</span>
                         </div>
                         <div class="card-content">

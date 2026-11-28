@@ -28,6 +28,7 @@ urlpatterns = [
     path('food/detail/',views.food_detail,name='food_detail'),
 
     path('hotel/', views.hotel),
+    # path('food/', views.food),
     path('service/', views.service),
     path('battambang/', views.battambang),
     path('emergency/', views.emergency),

@@ -5,13 +5,12 @@ from .models import card_food, card_place, categoryPlace
 
 def place(request):
     card_places=card_place.objects.all()
-    context = {'card_places' : card_places}
+    categoryPlaces=categoryPlace.objects.all()
+    context = {
+        'card_places' : card_places,
+        'categoryPlaces' : categoryPlaces,
+    }
     return render(request, 'placenavbar.html', context)
-
-def category_Place(request):
-   categoryPlaces=categoryPlace.objects.all()
-   context = {'categoryPlaces' : categoryPlaces}
-   return render(request, 'placeCategory.html', context)
 
 def food(request):
     card_foods=card_food.objects.all()

@@ -7,7 +7,7 @@ class categoryPlace(models.Model):
     return self.category_type
 
 class card_place(models.Model):
-    # image = models.ImageField()
+    image = models.ImageField(upload_to='images/', blank=True, null=True )
     name = models.CharField(max_length=150)
     descriptions = models.TextField(default='')
     destination = models.CharField(max_length=20)
