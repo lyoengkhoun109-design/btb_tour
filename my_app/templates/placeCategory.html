@@ -1,0 +1,8 @@
+    
+    
+
+{% for categoryPlace in categoryPlaces %}
+    <button class="filter-btn" onclick="filterCards('{{categoryPlace.category_type}}', this)">{{categoryPlace.category_type}}</button>
+{% endfor %}
+    
+    
